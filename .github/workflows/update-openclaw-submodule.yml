@@ -1,0 +1,46 @@
+# Actualiza el puntero del submódulo en openclaw-workspace cada vez que hay un push a main.
+# Solo se ejecuta cuando hay un cambio nuevo en este repo (WEBSITE_AGI_DEPLOYMENTS).
+#
+# Requiere: en este repo (WEBSITE_AGI_DEPLOYMENTS) → Settings → Secrets and variables → Actions
+#   Crear secret: OPENCLAW_WORKSPACE_PUSH_TOKEN (token con repo + push a maestroagi/openclaw-workspace).
+
+name: Update openclaw-workspace submodule
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  update-submodule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout openclaw-workspace
+        uses: actions/checkout@v4
+        with:
+          repository: maestroagi/openclaw-workspace
+          token: ${{ secrets.OPENCLAW_WORKSPACE_PUSH_TOKEN }}
+          path: openclaw-workspace
+          fetch-depth: 0
+          submodules: true
+
+      - name: Update submodule to this commit
+        run: |
+          cd openclaw-workspace
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          SUBMODULE_PATH="sites/WEBSITE_AGI_DEPLOYMENTS"
+          if [ ! -d "$SUBMODULE_PATH/.git" ]; then
+            echo "Submodule $SUBMODULE_PATH not present in openclaw-workspace; skipping."
+            exit 0
+          fi
+          cd "$SUBMODULE_PATH"
+          git fetch origin
+          git checkout ${{ github.sha }}
+          cd ../..
+          git add "$SUBMODULE_PATH"
+          if git diff --staged --quiet; then
+            echo "Submodule already at ${{ github.sha }}; nothing to push."
+            exit 0
+          fi
+          git commit -m "chore(site): update WEBSITE_AGI_DEPLOYMENTS to ${{ github.sha }}"
+          git push https://x-access-token:${{ secrets.OPENCLAW_WORKSPACE_PUSH_TOKEN }}@github.com/maestroagi/openclaw-workspace.git HEAD:main

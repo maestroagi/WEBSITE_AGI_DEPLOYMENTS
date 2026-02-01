@@ -1,0 +1,40 @@
+# Único workflow de deploy a GitHub Pages para este repo.
+# Usa actions/upload-pages-artifact y actions/deploy-pages (recomendado por GitHub).
+# En Settings → Pages del repo, elegir "Source: GitHub Actions".
+#
+# Si en GitHub ves otros workflows de Pages ("Deploy static content to Pages", etc.),
+# desactívalos o bórralos para evitar conflictos; solo debe correr este.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
