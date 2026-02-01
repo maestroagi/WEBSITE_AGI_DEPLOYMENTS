@@ -3,114 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://maestroagi.github.io/WEBSITE_AGI_DEPLOYMENTS/">
-    <title>Desarrollo - Proyecto AGI</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Desarrollo - Herramientas y componentes en desarrollo">
+    <title>Desarrollo - AGI Deployments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <div class="container">
-        <div id="site-nav"></div>
-        <div class="breadcrumb">
-            <a href="./">Inicio</a> <span>›</span> <a href="desarrollo/">Desarrollo</a>
-        </div>
-        <header>
-            <h1>🛠️ Desarrollo - Proyecto AGI</h1>
-            <p class="subtitle">Recursos, herramientas y documentación para el desarrollo del sistema</p>
-        </header>
+    <nav class="navbar"><div class="navbar-container"><a href="../" class="navbar-brand"><span class="navbar-brand-icon">◈</span><span>AGI<span style="color: var(--color-accent);">Deploy</span></span></a><button class="navbar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><ul class="navbar-menu"><li><a href="../" class="navbar-link">Inicio</a></li><li class="navbar-dropdown"><a href="#" class="navbar-link">Documentación ▾</a><div class="navbar-dropdown-menu"><a href="../documentacion/" class="navbar-dropdown-item">General</a><a href="../api/" class="navbar-dropdown-item">API</a><a href="../tutoriales/" class="navbar-dropdown-item">Tutoriales</a><a href="../faq/" class="navbar-dropdown-item">FAQ</a></div></li><li class="navbar-dropdown"><a href="#" class="navbar-link active">Proyectos ▾</a><div class="navbar-dropdown-menu"><a href="../proyectos/" class="navbar-dropdown-item">Todos</a><a href="../investigacion/" class="navbar-dropdown-item">Investigación</a><a href="./" class="navbar-dropdown-item">Desarrollo</a></div></li><li><a href="../comunidad/" class="navbar-link">Comunidad</a></li><li><a href="../cambios/" class="navbar-link">Changelog</a></li><li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="navbar-link">GitHub</a></li><li><button class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li></ul></div></nav>
 
-        <main>
-            <section class="content-section">
-                <div class="nav-grid">
-                    <div class="nav-category">
-                        <div class="category-header">
-                            <span class="category-icon">💻</span>
-                            <h3 class="category-title">Código Fuente</h3>
-                        </div>
-                        <div class="links-grid">
-                            <div class="link-item"><a href="codigo/">Código Principal</a></div>
-                            <div class="link-item"><a href="frameworks/">Frameworks</a></div>
-                            <div class="link-item"><a href="apis/">APIs</a></div>
-                            <div class="link-item"><a href="sdk/">SDK</a></div>
-                            <div class="link-item"><a href="herramientas/">Herramientas</a></div>
-                            <div class="link-item"><a href="pruebas/">Pruebas</a></div>
-                        </div>
+    <main class="main-content">
+        <div class="container">
+            <nav class="breadcrumb"><a href="../">Inicio</a><span class="breadcrumb-separator">›</span><a href="../proyectos/">Proyectos</a><span class="breadcrumb-separator">›</span><span>Desarrollo</span></nav>
+
+            <div class="page-header">
+                <h1 class="page-title">Desarrollo</h1>
+                <p class="page-description">Herramientas, skills y componentes en desarrollo activo.</p>
+            </div>
+
+            <div class="cards-grid">
+                <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/skills" target="_blank" class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">Skills</h3>
+                    <p class="card-description">Módulos que extienden las capacidades del asistente: Notion, Web Deploy, Slack.</p>
+                </a>
+
+                <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/scripts" target="_blank" class="card">
+                    <div class="card-icon">📜</div>
+                    <h3 class="card-title">Scripts de Automatización</h3>
+                    <p class="card-description">Scripts bash para sync, backup, notificaciones y deployment.</p>
+                </a>
+
+                <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/vps-config" target="_blank" class="card">
+                    <div class="card-icon">🐳</div>
+                    <h3 class="card-title">Configuración Docker</h3>
+                    <p class="card-description">Docker Compose y configuración para desplegar en VPS.</p>
+                </a>
+
+                <a href="../api/" class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">API Gateway</h3>
+                    <p class="card-description">Endpoints REST para interactuar con el asistente programáticamente.</p>
+                </a>
+
+                <a href="https://github.com/maestroagi/WEBSITE_AGI_DEPLOYMENTS" target="_blank" class="card">
+                    <div class="card-icon">🌐</div>
+                    <h3 class="card-title">Website</h3>
+                    <p class="card-description">Este sitio web modular con sistema de temas y changelogs automáticos.</p>
+                </a>
+
+                <a href="https://github.com/maestroagi/openclaw-workspace/issues" target="_blank" class="card">
+                    <div class="card-icon">📋</div>
+                    <h3 class="card-title">Roadmap</h3>
+                    <p class="card-description">Ver issues abiertos y próximas funcionalidades planificadas.</p>
+                </a>
+            </div>
+
+            <section class="section">
+                <h2>Contribuir</h2>
+                <div class="card">
+                    <p class="card-description">¿Quieres contribuir al desarrollo? Revisa los issues abiertos, haz un fork del repositorio y envía un pull request. Toda contribución es bienvenida.</p>
+                    <div class="mt-lg">
+                        <a href="https://github.com/maestroagi/openclaw-workspace/pulls" target="_blank" class="btn btn-primary">Ver pull requests</a>
+                        <a href="https://github.com/maestroagi/openclaw-workspace/issues/new" target="_blank" class="btn btn-secondary">Crear issue</a>
                     </div>
-
-                    <div class="nav-category">
-                        <div class="category-header">
-                            <span class="category-icon">🔄</span>
-                            <h3 class="category-title">Actualizaciones</h3>
-                        </div>
-                        <div class="links-grid">
-                            <div class="link-item"><a href="cambios/">Registro de Cambios</a></div>
-                            <div class="link-item"><a href="cambios/">Changelog</a></div>
-                            <div class="link-item"><a href="cambios/">Releases</a></div>
-                            <div class="link-item"><a href="proyectos/">Milestones</a></div>
-                            <div class="link-item"><a href="desarrollo/">Issues</a></div>
-                            <div class="link-item"><a href="desarrollo/">Pull Requests</a></div>
-                        </div>
-                    </div>
-
-                    <div class="nav-category">
-                        <div class="category-header">
-                            <span class="category-icon">🔧</span>
-                            <h3 class="category-title">Configuración</h3>
-                        </div>
-                        <div class="links-grid">
-                            <div class="link-item"><a href="documentacion/">Configuración</a></div>
-                            <div class="link-item"><a href="desarrollo/">Despliegue</a></div>
-                            <div class="link-item"><a href="desarrollo/">CI/CD</a></div>
-                            <div class="link-item"><a href="desarrollo/">Monitorización</a></div>
-                            <div class="link-item"><a href="desarrollo/">Logging</a></div>
-                            <div class="link-item"><a href="desarrollo/">Backup</a></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="category-card">
-                    <h3>Estado del Desarrollo</h3>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number">Active</span>
-                            <span class="stat-label">Estado</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">2026</span>
-                            <span class="stat-label">Año Actual</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">50+</span>
-                            <span class="stat-label">Features</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Operación</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="version-card">
-                    <h3 class="version-title">Ciclo de Desarrollo</h3>
-                    <p>El proyecto sigue un ciclo de desarrollo ágil con releases regulares. Cada versión incluye nuevas funcionalidades, mejoras de rendimiento y correcciones de seguridad.</p>
-                    <ul class="change-list">
-                        <li>Planning: Definición de objetivos y prioridades</li>
-                        <li>Development: Implementación y pruebas</li>
-                        <li>Review: Revisión de código y calidad</li>
-                        <li>Release: Despliegue y documentación</li>
-                    </ul>
                 </div>
             </section>
-        </main>
+        </div>
+    </main>
 
-        <footer>
-            <div class="footer-links">
-                <a href="./">Inicio</a>
-                <a href="cambios/">Cambios</a>
-                <a href="documentacion/">Documentación</a>
-            </div>
-            <p class="copyright">© 2026 Proyecto AGI - Desarrollo</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 AGI Deployments.</p><p><a href="../">Volver al inicio</a></p></div></div></footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

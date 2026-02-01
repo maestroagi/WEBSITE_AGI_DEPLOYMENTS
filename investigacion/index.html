@@ -3,133 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://maestroagi.github.io/WEBSITE_AGI_DEPLOYMENTS/">
-    <title>Investigación - Proyecto AGI</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Investigación - Proyectos de investigación en IA">
+    <title>Investigación - AGI Deployments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
-    <div class="container">
-        <div id="site-nav"></div>
-        <div class="breadcrumb">
-            <a href="./">Inicio</a> <span>›</span> <a href="investigacion/">Investigación</a>
-        </div>
-        
-        <header>
-            <h1>🔬 Área de Investigación</h1>
-            <p class="subtitle">Centro de conocimientos y descubrimientos del Proyecto AGI</p>
-        </header>
-        
-        <div class="content-grid">
-            <div class="card">
-                <h3>🚀 Últimos Avances</h3>
-                <p>Explora los descubrimientos más recientes en el campo de la Inteligencia Artificial General.</p>
-                <ul>
-                    <li>Modelos cognitivos avanzados</li>
-                    <li>Arquitecturas neuronales bio-inspiradas</li>
-                    <li>Sistemas de razonamiento multimodal</li>
-                    <li>Algoritmos de auto-mejora recursiva</li>
-                </ul>
+    <nav class="navbar"><div class="navbar-container"><a href="../" class="navbar-brand"><span class="navbar-brand-icon">◈</span><span>AGI<span style="color: var(--color-accent);">Deploy</span></span></a><button class="navbar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><ul class="navbar-menu"><li><a href="../" class="navbar-link">Inicio</a></li><li class="navbar-dropdown"><a href="#" class="navbar-link">Documentación ▾</a><div class="navbar-dropdown-menu"><a href="../documentacion/" class="navbar-dropdown-item">General</a><a href="../api/" class="navbar-dropdown-item">API</a><a href="../tutoriales/" class="navbar-dropdown-item">Tutoriales</a><a href="../faq/" class="navbar-dropdown-item">FAQ</a></div></li><li class="navbar-dropdown"><a href="#" class="navbar-link active">Proyectos ▾</a><div class="navbar-dropdown-menu"><a href="../proyectos/" class="navbar-dropdown-item">Todos</a><a href="./" class="navbar-dropdown-item">Investigación</a><a href="../desarrollo/" class="navbar-dropdown-item">Desarrollo</a></div></li><li><a href="../comunidad/" class="navbar-link">Comunidad</a></li><li><a href="../cambios/" class="navbar-link">Changelog</a></li><li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="navbar-link">GitHub</a></li><li><button class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li></ul></div></nav>
+
+    <main class="main-content">
+        <div class="container">
+            <nav class="breadcrumb"><a href="../">Inicio</a><span class="breadcrumb-separator">›</span><a href="../proyectos/">Proyectos</a><span class="breadcrumb-separator">›</span><span>Investigación</span></nav>
+
+            <div class="page-header">
+                <h1 class="page-title">Investigación</h1>
+                <p class="page-description">Proyectos de investigación en inteligencia artificial, alineación y seguridad.</p>
             </div>
-            
-            <div class="card">
-                <h3>📊 Estadísticas</h3>
-                <p>Seguimiento del progreso de investigación:</p>
-                <ul>
-                    <li><strong>Papers publicados:</strong> 24</li>
-                    <li><strong>Experimentos completados:</strong> 156</li>
-                    <li><strong>Modelos entrenados:</strong> 89</li>
-                    <li><strong>Horas de cómputo:</strong> 10,240</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h3>🔗 Recursos</h3>
-                <p>Enlaces útiles para investigadores:</p>
-                <ul>
-                    <li><a href="#papers">Biblioteca de Papers</a></li>
-                    <li><a href="#datasets">Datasets</a></li>
-                    <li><a href="#tools">Herramientas de Análisis</a></li>
-                    <li><a href="#collaborations">Colaboraciones</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="stats-container">
-            <h2>📈 Métricas de Investigación</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number">85%</span>
-                    <span class="stat-label">Precisión modelos</span>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🧠</div>
+                    <h3 class="card-title">Alineación de IA</h3>
+                    <p class="card-description">Investigación sobre cómo asegurar que los sistemas de IA actúen de acuerdo con los valores humanos.</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">42%</span>
-                    <span class="stat-label">Mejora anual</span>
+
+                <div class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3 class="card-title">Seguridad de Sistemas</h3>
+                    <p class="card-description">Estudio de vulnerabilidades y mecanismos de protección para asistentes de IA.</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">156</span>
-                    <span class="stat-label">Experimentos</span>
+
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">Evaluación de Modelos</h3>
+                    <p class="card-description">Benchmarks y métricas para evaluar el rendimiento y capacidades de LLMs.</p>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Monitoreo</span>
+
+                <div class="card">
+                    <div class="card-icon">🤝</div>
+                    <h3 class="card-title">Interacción Humano-IA</h3>
+                    <p class="card-description">Investigación sobre interfaces y patrones de comunicación efectivos.</p>
                 </div>
             </div>
+
+            <section class="section">
+                <h2>Recursos</h2>
+                <div class="card">
+                    <p class="card-description">La investigación en IA segura y alineada es fundamental para el desarrollo responsable de sistemas inteligentes. Exploramos temas como interpretabilidad, robustez y comportamiento emergente.</p>
+                    <div class="mt-lg">
+                        <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/docs" target="_blank" class="btn btn-primary">Ver documentación de investigación</a>
+                    </div>
+                </div>
+            </section>
         </div>
-        
-        <h2 id="papers" style="color: white; margin: 30px 0 20px; text-align: center;">📖 Papers Destacados</h2>
-        
-        <div class="research-grid">
-            <div class="research-paper">
-                <h3 class="paper-title">Arquitectura Cognitiva para AGI Generalizada</h3>
-                <div class="paper-authors">Dr. Elena Rodríguez, Prof. James Chen, Dr. Amira Hassan</div>
-                <div class="paper-date" style="color: var(--text-secondary); margin: 10px 0;">Publicado: Enero 28, 2026</div>
-                <p class="paper-abstract">Presentamos una nueva arquitectura cognitiva que combina redes neuronales profundas con sistemas simbólicos para lograr razonamiento generalizado. El modelo demuestra capacidades mejoradas en transferencia de conocimiento y adaptación a tareas desconocidas.</p>
-                <a href="#" class="paper-link">Leer Paper</a>
-            </div>
-            
-            <div class="research-paper">
-                <h3 class="paper-title">Ética Algorítmica en Sistemas AGI</h3>
-                <div class="paper-authors">Prof. Maria Santos, Dr. Thomas Williams, Prof. Yuki Tanaka</div>
-                <div class="paper-date" style="color: var(--text-secondary); margin: 10px 0;">Publicado: Febrero 1, 2026</div>
-                <p class="paper-abstract">Exploramos marcos éticos para la implementación de sistemas AGI, enfocándonos en la alineación de objetivos, transparencia y responsabilidad. Proponemos un sistema de auditoría ética para sistemas de IA avanzada.</p>
-                <a href="#" class="paper-link">Leer Paper</a>
-            </div>
-        </div>
-        
-        <div class="content-grid">
-            <div class="card">
-                <h3>🧪 Laboratorio Virtual</h3>
-                <p>Accede a nuestros entornos de simulación para experimentar con modelos AGI:</p>
-                <ul>
-                    <li>Entornos de prueba seguros</li>
-                    <li>Simulaciones de mundo abierto</li>
-                    <li>Herramientas de análisis de comportamiento</li>
-                    <li>Plataforma de experimentos colaborativos</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h3>👥 Colaboraciones</h3>
-                <p>Trabajamos con instituciones líderes en investigación:</p>
-                <ul>
-                    <li>MIT - Laboratorio de Inteligencia Artificial</li>
-                    <li>Stanford - Instituto de Ciencias Cognitivas</li>
-                    <li>ETH Zürich - Grupo de Ética en IA</li>
-                    <li>Universidad de Tokio - Laboratorio de Robótica</li>
-                </ul>
-            </div>
-        </div>
-        
-        <footer>
-            <p>Área de Investigación - Proyecto AGI © 2026</p>
-            <p>Avanzando en el conocimiento para una IA segura y beneficiosa</p>
-            <div class="footer-links">
-                <a href="./">Inicio</a>
-                <a href="documentacion/">Documentación</a>
-                <a href="cambios/">Cambios</a>
-            </div>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 AGI Deployments.</p><p><a href="../">Volver al inicio</a></p></div></div></footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>

@@ -1,51 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <base href="https://maestroagi.github.io/WEBSITE_AGI_DEPLOYMENTS/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>estado - Proyecto AGI</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Estado del Sistema - Monitoreo de servicios OpenClaw">
+    <title>Estado del Sistema - AGI Deployments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <style>
+        .status-card { display: flex; align-items: center; gap: var(--space-md); }
+        .status-indicator { width: 12px; height: 12px; border-radius: 50%; }
+        .status-ok { background: var(--color-success); box-shadow: 0 0 10px var(--color-success); }
+        .status-warn { background: var(--color-warning); box-shadow: 0 0 10px var(--color-warning); }
+        .status-error { background: var(--color-error); box-shadow: 0 0 10px var(--color-error); }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Navegación superior -->
-        <div id="site-nav"></div>
-        
-        <div class="breadcrumb">
-            <a href="./">Inicio</a> <span>></span> <a href="estado/">Estado</a>
-        </div>
-        
-        <header>
-            <h1>📡 Estado</h1>
-            <p class="subtitle">Sección del Proyecto AGI</p>
-        </header>
-        
-        <div class="content">
-            <div class="section">
-                <h2>Acerca de Estado</h2>
-                <p>Esta es la sección de estado del Proyecto AGI. Aquí encontrarás recursos, documentación y herramientas relacionadas con esta área del proyecto.</p>
-                
-                <h3>Contenido disponible próximamente:</h3>
-                <ul>
-                    <li>Documentación detallada</li>
-                    <li>Guías de uso</li>
-                    <li>Recursos técnicos</li>
-                    <li>Best practices</li>
-                </ul>
+    <nav class="navbar"><div class="navbar-container"><a href="../" class="navbar-brand"><span class="navbar-brand-icon">◈</span><span>AGI<span style="color: var(--color-accent);">Deploy</span></span></a><button class="navbar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><ul class="navbar-menu"><li><a href="../" class="navbar-link">Inicio</a></li><li class="navbar-dropdown"><a href="#" class="navbar-link">Documentación ▾</a><div class="navbar-dropdown-menu"><a href="../documentacion/" class="navbar-dropdown-item">General</a><a href="../api/" class="navbar-dropdown-item">API</a><a href="../tutoriales/" class="navbar-dropdown-item">Tutoriales</a><a href="../faq/" class="navbar-dropdown-item">FAQ</a></div></li><li class="navbar-dropdown"><a href="#" class="navbar-link">Proyectos ▾</a><div class="navbar-dropdown-menu"><a href="../proyectos/" class="navbar-dropdown-item">Todos</a><a href="../investigacion/" class="navbar-dropdown-item">Investigación</a><a href="../desarrollo/" class="navbar-dropdown-item">Desarrollo</a></div></li><li><a href="../comunidad/" class="navbar-link">Comunidad</a></li><li><a href="../cambios/" class="navbar-link">Changelog</a></li><li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="navbar-link">GitHub</a></li><li><button class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li></ul></div></nav>
+
+    <main class="main-content">
+        <div class="container">
+            <nav class="breadcrumb"><a href="../">Inicio</a><span class="breadcrumb-separator">›</span><span>Estado</span></nav>
+
+            <div class="page-header">
+                <h1 class="page-title">Estado del Sistema</h1>
+                <p class="page-description">Monitoreo en tiempo real de los servicios del ecosistema OpenClaw.</p>
             </div>
-        </div>
-        
-        <footer>
-            <p>Estado - Proyecto AGI © 2026</p>
-            <p>Contribuyendo al avance de la inteligencia artificial general</p>
-            <div class="footer-links">
-                <a href="./">Inicio</a>
-                <a href="../acerca/">Acerca de</a>
-                <a href="../contacto/">Contacto</a>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="status-card">
+                        <span class="status-indicator status-ok"></span>
+                        <div>
+                            <h3 class="card-title">Gateway OpenClaw</h3>
+                            <p class="card-description">Servicio principal del asistente</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="status-card">
+                        <span class="status-indicator status-ok"></span>
+                        <div>
+                            <h3 class="card-title">Telegram Bot</h3>
+                            <p class="card-description">Bot de interacción @hagoragi_bot</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="status-card">
+                        <span class="status-indicator status-ok"></span>
+                        <div>
+                            <h3 class="card-title">Sincronización GitHub</h3>
+                            <p class="card-description">Sync bidireccional cada 5 min</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="status-card">
+                        <span class="status-indicator status-ok"></span>
+                        <div>
+                            <h3 class="card-title">Website</h3>
+                            <p class="card-description">GitHub Pages activo</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </div>
-    <script src="../script.js"></script>
+
+            <section class="section">
+                <h2>Última Actividad</h2>
+                <div class="changelog">
+                    <article class="changelog-entry">
+                        <div class="changelog-date">Hace 5 minutos</div>
+                        <h3 class="changelog-title">Sync desde GitHub completado</h3>
+                        <div class="changelog-content"><p>Sin cambios detectados.</p></div>
+                    </article>
+                    <article class="changelog-entry">
+                        <div class="changelog-date">Hace 10 minutos</div>
+                        <h3 class="changelog-title">Backup a GitHub completado</h3>
+                        <div class="changelog-content"><p>Sin cambios detectados.</p></div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 AGI Deployments.</p><p><a href="../">Volver al inicio</a></p></div></div></footer>
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
