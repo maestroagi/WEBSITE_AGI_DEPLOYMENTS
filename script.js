@@ -6,12 +6,29 @@
     'use strict';
 
     // ==========================================
+    // Detectar profundidad para rutas relativas
+    // ==========================================
+    function getBasePath() {
+        const path = window.location.pathname;
+        // Detectar si estamos en subdirectorio
+        const parts = path.split('/').filter(p => p && p !== 'WEBSITE_AGI_DEPLOYMENTS');
+        // Si hay partes después del base, estamos en subdirectorio
+        if (parts.length > 0 && parts[0] !== 'index.html') {
+            return '../';
+        }
+        return './';
+    }
+
+    const BASE = getBasePath();
+
+    // ==========================================
     // Navegación compartida (se inyecta en todas las páginas)
     // ==========================================
-    const NAV_HTML = `
+    function getNavHTML() {
+        return `
     <nav class="site-nav">
         <div class="nav-container">
-            <a href="./" class="nav-brand">
+            <a href="${BASE}" class="nav-brand">
                 <span class="nav-brand-icon">🤖</span>
                 <span>HAGORAGI</span>
             </a>
@@ -23,37 +40,37 @@
             </button>
 
             <ul class="nav-menu">
-                <li><a href="./" class="nav-link" data-page="home">Inicio</a></li>
+                <li><a href="${BASE}" class="nav-link" data-page="home">Inicio</a></li>
 
                 <li class="nav-dropdown">
                     <a href="#" class="nav-link">Changelogs ▾</a>
                     <div class="nav-dropdown-menu">
-                        <a href="changelog-hagoragi/" class="nav-dropdown-item">🤖 HAGORAGI Bot</a>
-                        <a href="changelog-openclaw/" class="nav-dropdown-item">🔧 OpenClaw Official</a>
+                        <a href="${BASE}changelog-hagoragi/" class="nav-dropdown-item">🤖 HAGORAGI Bot</a>
+                        <a href="${BASE}changelog-openclaw/" class="nav-dropdown-item">🔧 OpenClaw Official</a>
                     </div>
                 </li>
 
                 <li class="nav-dropdown">
                     <a href="#" class="nav-link">Documentación ▾</a>
                     <div class="nav-dropdown-menu">
-                        <a href="documentacion/" class="nav-dropdown-item">📚 General</a>
-                        <a href="api/" class="nav-dropdown-item">⚡ API Reference</a>
-                        <a href="tutoriales/" class="nav-dropdown-item">📖 Tutoriales</a>
-                        <a href="faq/" class="nav-dropdown-item">❓ FAQ</a>
+                        <a href="${BASE}documentacion/" class="nav-dropdown-item">📚 General</a>
+                        <a href="${BASE}api/" class="nav-dropdown-item">⚡ API Reference</a>
+                        <a href="${BASE}tutoriales/" class="nav-dropdown-item">📖 Tutoriales</a>
+                        <a href="${BASE}faq/" class="nav-dropdown-item">❓ FAQ</a>
                     </div>
                 </li>
 
                 <li class="nav-dropdown">
                     <a href="#" class="nav-link">Proyecto ▾</a>
                     <div class="nav-dropdown-menu">
-                        <a href="proyectos/" class="nav-dropdown-item">📊 Proyectos</a>
-                        <a href="desarrollo/" class="nav-dropdown-item">🛠️ Desarrollo</a>
-                        <a href="skills/" class="nav-dropdown-item">🧩 Skills</a>
-                        <a href="estado/" class="nav-dropdown-item">📈 Estado</a>
+                        <a href="${BASE}proyectos/" class="nav-dropdown-item">📊 Proyectos</a>
+                        <a href="${BASE}desarrollo/" class="nav-dropdown-item">🛠️ Desarrollo</a>
+                        <a href="${BASE}skills/" class="nav-dropdown-item">🧩 Skills</a>
+                        <a href="${BASE}estado/" class="nav-dropdown-item">📈 Estado</a>
                     </div>
                 </li>
 
-                <li><a href="seguridad/" class="nav-link" data-page="seguridad">Seguridad</a></li>
+                <li><a href="${BASE}seguridad/" class="nav-link" data-page="seguridad">Seguridad</a></li>
 
                 <li>
                     <a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="nav-link">
@@ -70,6 +87,7 @@
         </div>
     </nav>
     `;
+    }
 
     // ==========================================
     // Gestión de Tema
@@ -138,12 +156,13 @@
     // Inyectar navegación
     // ==========================================
     function injectNavigation() {
+        const navHTML = getNavHTML();
         const navPlaceholder = document.getElementById('site-nav');
         if (navPlaceholder) {
-            navPlaceholder.innerHTML = NAV_HTML;
+            navPlaceholder.innerHTML = navHTML;
         } else {
             // Insertar al inicio del body
-            document.body.insertAdjacentHTML('afterbegin', NAV_HTML);
+            document.body.insertAdjacentHTML('afterbegin', navHTML);
         }
     }
 

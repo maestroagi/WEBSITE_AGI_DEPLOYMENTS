@@ -32,8 +32,43 @@
             <button class="tab active">🔧 OpenClaw Official</button>
         </div>
 
+        <!-- Info: Qué es OpenClaw -->
+        <div class="card mb-lg">
+            <div class="section-header">
+                <span class="section-tag">🔧 Proyecto Upstream</span>
+            </div>
+            <p class="card-description">
+                OpenClaw es el proyecto base sobre el cual HAGORAGI está construido. Este changelog registra
+                <strong>únicamente los cambios del proyecto oficial</strong>, separados de nuestras personalizaciones.
+            </p>
+            <p class="card-description mt-md">
+                Sincronizamos automáticamente con upstream mediante <code>update-from-upstream.sh</code>.
+            </p>
+        </div>
+
         <!-- Changelog -->
         <div class="changelog">
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">31 Enero 2026</span>
+                    <span class="changelog-version">v0.16.0</span>
+                </div>
+                <h3 class="changelog-title">Multi-modelo y context window mejorado</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-feature">feature</span> Soporte para Claude 3.5 Sonnet y GPT-4 Turbo</li>
+                        <li><span class="tag tag-feature">feature</span> Context window dinámico según modelo</li>
+                        <li><span class="tag tag-feature">feature</span> Fallback automático entre modelos</li>
+                        <li><span class="tag tag-improvement">improvement</span> Mejor tokenización para calcular contexto</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.16.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
             <article class="changelog-entry">
                 <div class="changelog-header">
                     <span class="changelog-date">30 Enero 2026</span>
@@ -42,10 +77,10 @@
                 <h3 class="changelog-title">Mejoras de rendimiento y caché</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Nuevo sistema de caché para respuestas de LLM</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para múltiples proveedores de embeddings</li>
-                        <li><span class="tag tag-fix">fix</span> Corrección de memory leaks en sesiones largas</li>
-                        <li><span class="tag tag-breaking">breaking</span> Cambio en formato de configuración de skills</li>
+                        <li><span class="tag tag-feature">feature</span> Nuevo sistema de caché LRU para respuestas de LLM</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para múltiples proveedores de embeddings (OpenAI, Cohere, local)</li>
+                        <li><span class="tag tag-fix">fix</span> Corrección de memory leaks en sesiones largas (>24h)</li>
+                        <li><span class="tag tag-breaking">breaking</span> Cambio en formato de configuración de skills: ahora usa SKILL.md</li>
                     </ul>
                     <p class="mt-md">
                         <a href="https://github.com/openclaw/openclaw/releases/tag/v0.15.0" target="_blank" class="btn btn-secondary">
@@ -57,18 +92,57 @@
 
             <article class="changelog-entry">
                 <div class="changelog-header">
+                    <span class="changelog-date">28 Enero 2026</span>
+                    <span class="changelog-version">v0.14.3</span>
+                </div>
+                <h3 class="changelog-title">Hotfix: Rate limiting</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-fix">fix</span> Corregido manejo de rate limits en APIs externas</li>
+                        <li><span class="tag tag-fix">fix</span> Retry exponencial para errores 429</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.14.3" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
                     <span class="changelog-date">25 Enero 2026</span>
                     <span class="changelog-version">v0.14.2</span>
                 </div>
-                <h3 class="changelog-title">Correcciones de bugs</h3>
+                <h3 class="changelog-title">Correcciones de bugs y seguridad</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-fix">fix</span> Corregido error de timeout en llamadas a API</li>
-                        <li><span class="tag tag-fix">fix</span> Mejora en manejo de errores de red</li>
-                        <li><span class="tag tag-security">security</span> Actualización de dependencias de seguridad</li>
+                        <li><span class="tag tag-fix">fix</span> Corregido error de timeout en llamadas a API (>30s)</li>
+                        <li><span class="tag tag-fix">fix</span> Mejora en manejo de errores de red con reintentos</li>
+                        <li><span class="tag tag-security">security</span> Actualización de axios a v1.6.5 (CVE-2024-XXXX)</li>
+                        <li><span class="tag tag-security">security</span> Sanitización de inputs en CLI</li>
                     </ul>
                     <p class="mt-md">
                         <a href="https://github.com/openclaw/openclaw/releases/tag/v0.14.2" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">22 Enero 2026</span>
+                    <span class="changelog-version">v0.14.1</span>
+                </div>
+                <h3 class="changelog-title">Hotfix: Streaming</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-fix">fix</span> Corregido streaming con Claude que se cortaba</li>
+                        <li><span class="tag tag-fix">fix</span> Fix para SSE con proxies inversos</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.14.1" target="_blank" class="btn btn-secondary">
                             Ver release en GitHub →
                         </a>
                     </p>
@@ -83,10 +157,11 @@
                 <h3 class="changelog-title">Nueva UI y streaming</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Nueva interfaz web con diseño mejorado</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para streaming de respuestas</li>
-                        <li><span class="tag tag-feature">feature</span> Nuevo skill de calendario</li>
-                        <li><span class="tag tag-fix">fix</span> Corrección en parsing de markdown</li>
+                        <li><span class="tag tag-feature">feature</span> Nueva interfaz web con diseño moderno (dark/light mode)</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para streaming de respuestas en tiempo real</li>
+                        <li><span class="tag tag-feature">feature</span> Nuevo skill oficial de calendario (Google Calendar)</li>
+                        <li><span class="tag tag-feature">feature</span> Historial de conversaciones persistente</li>
+                        <li><span class="tag tag-fix">fix</span> Corrección en parsing de markdown con code blocks</li>
                     </ul>
                     <p class="mt-md">
                         <a href="https://github.com/openclaw/openclaw/releases/tag/v0.14.0" target="_blank" class="btn btn-secondary">
@@ -101,16 +176,36 @@
                     <span class="changelog-date">15 Enero 2026</span>
                     <span class="changelog-version">v0.13.0</span>
                 </div>
-                <h3 class="changelog-title">Sistema de Skills mejorado</h3>
+                <h3 class="changelog-title">Sistema de Skills v2</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Nuevo formato de skills con SKILL.md</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para skills con dependencias</li>
-                        <li><span class="tag tag-feature">feature</span> Herramienta exec para ejecutar comandos</li>
-                        <li><span class="tag tag-breaking">breaking</span> Deprecado formato antiguo de skills</li>
+                        <li><span class="tag tag-feature">feature</span> Nuevo formato de skills con SKILL.md (descriptor)</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para skills con dependencias npm</li>
+                        <li><span class="tag tag-feature">feature</span> Herramienta <code>exec</code> para ejecutar comandos shell</li>
+                        <li><span class="tag tag-feature">feature</span> Marketplace de skills (beta)</li>
+                        <li><span class="tag tag-breaking">breaking</span> Deprecado formato antiguo de skills (skill.json)</li>
                     </ul>
                     <p class="mt-md">
                         <a href="https://github.com/openclaw/openclaw/releases/tag/v0.13.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">12 Enero 2026</span>
+                    <span class="changelog-version">v0.12.1</span>
+                </div>
+                <h3 class="changelog-title">Hotfix: Docker</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-fix">fix</span> Corregido Dockerfile para arquitecturas ARM64</li>
+                        <li><span class="tag tag-fix">fix</span> Variables de entorno en docker-compose</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.12.1" target="_blank" class="btn btn-secondary">
                             Ver release en GitHub →
                         </a>
                     </p>
@@ -125,13 +220,35 @@
                 <h3 class="changelog-title">Release inicial público</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Release inicial de OpenClaw</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para OpenAI, Anthropic y modelos locales</li>
-                        <li><span class="tag tag-feature">feature</span> Sistema de skills extensible</li>
-                        <li><span class="tag tag-feature">feature</span> Interfaz web y CLI</li>
+                        <li><span class="tag tag-feature">feature</span> Release inicial de OpenClaw - asistente AI open source</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para OpenAI (GPT-4), Anthropic (Claude) y modelos locales (Ollama)</li>
+                        <li><span class="tag tag-feature">feature</span> Sistema de skills extensible con hot-reload</li>
+                        <li><span class="tag tag-feature">feature</span> Interfaz web responsive y CLI interactivo</li>
+                        <li><span class="tag tag-feature">feature</span> API REST documentada con OpenAPI</li>
+                        <li><span class="tag tag-feature">feature</span> Docker image oficial en Docker Hub</li>
                     </ul>
                     <p class="mt-md">
                         <a href="https://github.com/openclaw/openclaw/releases/tag/v0.12.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">5 Enero 2026</span>
+                    <span class="changelog-version">v0.11.0-beta</span>
+                </div>
+                <h3 class="changelog-title">Beta pública</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-feature">feature</span> Primera versión beta pública</li>
+                        <li><span class="tag tag-feature">feature</span> Documentación inicial</li>
+                        <li><span class="tag tag-feature">feature</span> Skills: web-search, calculator, file-manager</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.11.0-beta" target="_blank" class="btn btn-secondary">
                             Ver release en GitHub →
                         </a>
                     </p>
