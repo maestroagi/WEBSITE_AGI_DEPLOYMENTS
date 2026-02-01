@@ -1,16 +1,39 @@
 // Funciones comunes para el sitio web del Proyecto AGI
 
-// Añadir funcionalidad de búsqueda
+const THEME_KEY = 'proyecto-agi-theme';
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar animaciones de carga
+    initTheme();
     initializeAnimations();
-    
-    // Configurar búsqueda si existe el elemento
     setupSearchFunctionality();
-    
-    // Actualizar año automáticamente
     updateYearAutomatically();
 });
+
+function initTheme() {
+    const saved = localStorage.getItem(THEME_KEY) || 'light';
+    document.documentElement.setAttribute('data-theme', saved);
+    updateThemeButton(saved);
+
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+        btn.addEventListener('click', function() {
+            const current = document.documentElement.getAttribute('data-theme') || 'light';
+            const next = current === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem(THEME_KEY, next);
+            updateThemeButton(next);
+        });
+    }
+}
+
+function updateThemeButton(theme) {
+    const label = document.getElementById('theme-label');
+    const iconSun = document.getElementById('theme-icon-sun');
+    const iconMoon = document.getElementById('theme-icon-moon');
+    if (label) label.textContent = theme === 'light' ? 'Tema oscuro' : 'Tema claro';
+    if (iconSun) iconSun.style.display = theme === 'light' ? 'block' : 'none';
+    if (iconMoon) iconMoon.style.display = theme === 'dark' ? 'block' : 'none';
+}
 
 function initializeAnimations() {
     const cards = document.querySelectorAll('.card, .stat-item, .link-item');
