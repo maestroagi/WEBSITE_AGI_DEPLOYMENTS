@@ -850,3 +850,115 @@ pre code {
         grid-template-columns: 1fr;
     }
 }
+
+/* === 3-Column Changelogs === */
+.changelogs-triple {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.changelogs-triple .changelog-column {
+    padding: 20px;
+}
+
+.changelogs-triple .changelog-column-title {
+    font-size: 1.1rem;
+}
+
+.changelogs-triple .changelog-entry {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.changelogs-triple .changelog-title {
+    font-size: 0.9rem;
+}
+
+.changelogs-triple .changelog-content li {
+    font-size: 0.8rem;
+    padding: 2px 0 2px 16px;
+}
+
+@media (max-width: 1200px) {
+    .changelogs-triple {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    .changelogs-triple {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === View Options === */
+.view-options {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.view-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.view-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+.view-btn:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.view-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
+
+/* === Tabs Enhancement === */
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    background: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.tab:hover {
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+
+.tab.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}

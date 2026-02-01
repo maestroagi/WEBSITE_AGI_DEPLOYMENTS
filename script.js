@@ -34,7 +34,8 @@
                 <li class="nav-dropdown">
                     <a href="${BASE}/cambios/" class="nav-link">Changelogs ▾</a>
                     <div class="nav-dropdown-menu">
-                        <a href="${BASE}/cambios/" class="nav-dropdown-item">📋 Side by Side</a>
+                        <a href="${BASE}/cambios/" class="nav-dropdown-item">📋 All (3 Columns)</a>
+                        <a href="${BASE}/changelog-website/" class="nav-dropdown-item">🌐 Website</a>
                         <a href="${BASE}/changelog-hagoragi/" class="nav-dropdown-item">🤖 HAGORAGI Bot</a>
                         <a href="${BASE}/changelog-openclaw/" class="nav-dropdown-item">🔧 OpenClaw Official</a>
                     </div>
