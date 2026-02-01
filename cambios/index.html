@@ -1,45 +1,248 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Changelog - Historial de cambios de HAGORAGI">
-    <title>Changelog - AGI Deployments</title>
+    <meta name="description" content="Changelogs - HAGORAGI Bot and OpenClaw Official side by side">
+    <title>Changelogs - AGI Deployments</title>
     <link rel="stylesheet" href="../styles.css">
-    <meta http-equiv="refresh" content="0; url=../changelog-hagoragi/">
 </head>
 <body>
     <div id="site-nav"></div>
 
     <div class="container">
         <nav class="breadcrumb">
-            <a href="../">Inicio</a>
+            <a href="../">Home</a>
             <span class="breadcrumb-separator">›</span>
-            <span>Changelog</span>
+            <span>Changelogs</span>
         </nav>
 
         <header class="page-header">
             <div class="page-icon">📋</div>
-            <h1 class="page-title">Changelog</h1>
+            <h1 class="page-title">Changelogs</h1>
             <p class="page-description">
-                Redirigiendo al changelog principal...
+                Side-by-side comparison of HAGORAGI Bot customizations and OpenClaw Official updates.
             </p>
         </header>
 
-        <div class="card">
-            <p class="card-description">Si no eres redirigido automaticamente:</p>
-            <div class="mt-md">
-                <a href="../changelog-hagoragi/" class="btn btn-primary">Ir a Changelog HAGORAGI</a>
-                <a href="../changelog-openclaw/" class="btn btn-secondary">Ir a Changelog OpenClaw</a>
+        <!-- Parallel Changelogs -->
+        <div class="changelogs-parallel">
+            <!-- HAGORAGI Column -->
+            <div class="changelog-column">
+                <div class="changelog-column-header">
+                    <span class="changelog-column-icon">🤖</span>
+                    <div>
+                        <div class="changelog-column-title">HAGORAGI Bot</div>
+                        <div class="changelog-column-subtitle">Custom changes, skills, integrations</div>
+                    </div>
+                </div>
+
+                <div class="changelog-compact">
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Feb 1, 2026</span>
+                            <span class="changelog-version">v2.2.0</span>
+                        </div>
+                        <h3 class="changelog-title">Dynamic navigation & path fixes</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-fix">fix</span> Navigation detects depth and generates correct paths</li>
+                                <li><span class="tag tag-improvement">improvement</span> Dynamic getBasePath() in script.js</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Feb 1, 2026</span>
+                            <span class="changelog-version">v2.1.0</span>
+                        </div>
+                        <h3 class="changelog-title">New modular website & notification fix</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> Unified website template with dark/light themes</li>
+                                <li><span class="tag tag-feature">feature</span> Two separate changelogs: HAGORAGI + OpenClaw</li>
+                                <li><span class="tag tag-fix">fix</span> Fixed notification spam every 5 min</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 31, 2026</span>
+                            <span class="changelog-version">v2.0.0</span>
+                        </div>
+                        <h3 class="changelog-title">Telegram notifications & improved sync</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> Scripts auto-load notify.env</li>
+                                <li><span class="tag tag-feature">feature</span> copy-notify-scripts-to-openclaw.sh for deployment</li>
+                                <li><span class="tag tag-fix">fix</span> Telegram notifications work in cron</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 30, 2026</span>
+                            <span class="changelog-version">v1.9.0</span>
+                        </div>
+                        <h3 class="changelog-title">Notion skill with exec tool</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> Notion skill migrated to OpenClaw exec tool</li>
+                                <li><span class="tag tag-feature">feature</span> New docs/NOTION-SETUP.md guide</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 25, 2026</span>
+                            <span class="changelog-version">v1.5.0</span>
+                        </div>
+                        <h3 class="changelog-title">Telegram Bot integration</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> @hagoragi_bot as main mobile chat interface</li>
+                                <li><span class="tag tag-feature">feature</span> Secondary bot for system notifications</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="mt-lg text-center">
+                    <a href="../changelog-hagoragi/" class="btn btn-primary">View Full Changelog →</a>
+                </p>
+            </div>
+
+            <!-- OpenClaw Column -->
+            <div class="changelog-column">
+                <div class="changelog-column-header">
+                    <span class="changelog-column-icon">🔧</span>
+                    <div>
+                        <div class="changelog-column-title">OpenClaw Official</div>
+                        <div class="changelog-column-subtitle">Upstream project updates</div>
+                    </div>
+                </div>
+
+                <div class="changelog-compact">
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 31, 2026</span>
+                            <span class="changelog-version">v0.16.0</span>
+                        </div>
+                        <h3 class="changelog-title">Multi-model & improved context window</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> Support for Claude 3.5 Sonnet and GPT-4 Turbo</li>
+                                <li><span class="tag tag-feature">feature</span> Dynamic context window per model</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 30, 2026</span>
+                            <span class="changelog-version">v0.15.0</span>
+                        </div>
+                        <h3 class="changelog-title">Performance improvements & cache</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> New LRU cache system for LLM responses</li>
+                                <li><span class="tag tag-fix">fix</span> Memory leaks in long sessions (>24h)</li>
+                                <li><span class="tag tag-breaking">breaking</span> Skills config now uses SKILL.md</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 25, 2026</span>
+                            <span class="changelog-version">v0.14.2</span>
+                        </div>
+                        <h3 class="changelog-title">Bug fixes & security</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-fix">fix</span> API timeout errors (>30s)</li>
+                                <li><span class="tag tag-security">security</span> axios update to v1.6.5</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 20, 2026</span>
+                            <span class="changelog-version">v0.14.0</span>
+                        </div>
+                        <h3 class="changelog-title">New UI & streaming</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> Modern web interface (dark/light mode)</li>
+                                <li><span class="tag tag-feature">feature</span> Real-time response streaming</li>
+                                <li><span class="tag tag-feature">feature</span> Official calendar skill (Google Calendar)</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="changelog-entry">
+                        <div class="changelog-header">
+                            <span class="changelog-date">Jan 15, 2026</span>
+                            <span class="changelog-version">v0.13.0</span>
+                        </div>
+                        <h3 class="changelog-title">Skills System v2</h3>
+                        <div class="changelog-content">
+                            <ul>
+                                <li><span class="tag tag-feature">feature</span> New skill format with SKILL.md descriptor</li>
+                                <li><span class="tag tag-feature">feature</span> <code>exec</code> tool for shell commands</li>
+                                <li><span class="tag tag-breaking">breaking</span> Old skill.json format deprecated</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="mt-lg text-center">
+                    <a href="../changelog-openclaw/" class="btn btn-primary">View Full Changelog →</a>
+                </p>
             </div>
         </div>
+
+        <!-- Info Section -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">ℹ️ Information</span>
+                <h2 class="section-title">Why Two Changelogs?</h2>
+            </div>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">HAGORAGI Bot</h3>
+                    <p class="card-description">
+                        Tracks <strong>our custom changes</strong>: skills we've built (Notion, Telegram, Slack, Web Deploy),
+                        automation scripts, sync systems, and workspace-specific configurations.
+                        These changes are independent of OpenClaw.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">OpenClaw Official</h3>
+                    <p class="card-description">
+                        Tracks <strong>upstream changes</strong> from the official OpenClaw project.
+                        Core features, performance improvements, and official fixes.
+                        We sync these changes using <code>update-from-upstream.sh</code>.
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>© 2026 HAGORAGI.</p>
-                <p><a href="../">← Volver al inicio</a></p>
+                <p>© 2026 HAGORAGI. Based on <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw</a>.</p>
+                <p><a href="../">← Back to Home</a></p>
             </div>
         </div>
     </footer>
