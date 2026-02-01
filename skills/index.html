@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Skills - Módulos que extienden las capacidades de HAGORAGI">
+    <meta name="description" content="Skills - Modules that extend HAGORAGI capabilities">
     <title>Skills - AGI Deployments</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -12,7 +12,7 @@
 
     <div class="container">
         <nav class="breadcrumb">
-            <a href="../">Inicio</a>
+            <a href="../">Home</a>
             <span class="breadcrumb-separator">›</span>
             <span>Skills</span>
         </nav>
@@ -21,16 +21,16 @@
             <div class="page-icon">🧩</div>
             <h1 class="page-title">Skills</h1>
             <p class="page-description">
-                Módulos que extienden las capacidades del asistente HAGORAGI.
-                Actualmente contamos con <strong>15+ skills</strong> personalizados.
+                Modules that extend the HAGORAGI assistant capabilities.
+                We currently have <strong>15+ custom skills</strong>.
             </p>
         </header>
 
-        <!-- Skills de Integraciones -->
+        <!-- Integration Skills -->
         <section class="section">
             <div class="section-header">
-                <span class="section-tag">🔗 Integraciones</span>
-                <h2 class="section-title">Conexiones Externas</h2>
+                <span class="section-tag">🔗 Integrations</span>
+                <h2 class="section-title">External Connections</h2>
             </div>
 
             <div class="cards-grid">
@@ -38,41 +38,41 @@
                     <div class="card-icon">📝</div>
                     <h3 class="card-title">Notion</h3>
                     <p class="card-description">
-                        Guarda links, tareas y notas en tu Backlog de Notion automáticamente.
-                        Usa el tool <code>exec</code> con <code>add-to-notion-backlog.sh</code>.
+                        Save links, tasks, and notes to your Notion Backlog automatically.
+                        Uses the <code>exec</code> tool with <code>add-to-notion-backlog.sh</code>.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li>Agregar URLs con título y categoría</li>
-                        <li>Crear tareas con prioridad</li>
-                        <li>Sincronización con database ID configurable</li>
+                        <li>Add URLs with title and category</li>
+                        <li>Create tasks with priority</li>
+                        <li>Configurable database ID sync</li>
                     </ul>
-                    <span class="card-link">Ver código →</span>
+                    <span class="card-link">View code →</span>
                 </a>
 
                 <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/skills/slack" target="_blank" class="card">
                     <div class="card-icon">💬</div>
                     <h3 class="card-title">Slack</h3>
                     <p class="card-description">
-                        Envía mensajes a canales y DMs de Slack. Soporta rich formatting con Blocks.
+                        Send messages to Slack channels and DMs. Supports rich formatting with Blocks.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li>Envío a canales y usuarios</li>
-                        <li>Formato Markdown y Blocks</li>
-                        <li>Lectura de mensajes recientes</li>
+                        <li>Send to channels and users</li>
+                        <li>Markdown and Blocks formatting</li>
+                        <li>Read recent messages</li>
                     </ul>
-                    <span class="card-link">Ver código →</span>
+                    <span class="card-link">View code →</span>
                 </a>
 
                 <div class="card">
                     <div class="card-icon">📱</div>
                     <h3 class="card-title">Telegram Bot</h3>
                     <p class="card-description">
-                        @hagoragi_bot es la interfaz principal para chatear desde móvil.
+                        @hagoragi_bot is the main interface for chatting from mobile.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li>Chat natural con el asistente</li>
-                        <li>Comandos: /status, /sync, /backup</li>
-                        <li>Envío de archivos y fotos</li>
+                        <li>Natural chat with the assistant</li>
+                        <li>Commands: /status, /sync, /backup</li>
+                        <li>File and photo sending</li>
                     </ul>
                 </div>
 
@@ -80,22 +80,22 @@
                     <div class="card-icon">🔔</div>
                     <h3 class="card-title">Telegram Notify</h3>
                     <p class="card-description">
-                        Bot secundario dedicado exclusivamente a notificaciones del sistema.
+                        Secondary bot dedicated exclusively to system notifications.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li>Alertas de sync completado</li>
-                        <li>Notificaciones de backup</li>
-                        <li>Updates de upstream disponibles</li>
+                        <li>Sync completion alerts</li>
+                        <li>Backup notifications</li>
+                        <li>Upstream updates available</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills de Automatización -->
+        <!-- Automation Skills -->
         <section class="section">
             <div class="section-header">
-                <span class="section-tag">⚙️ Automatización</span>
-                <h2 class="section-title">Scripts y Procesos</h2>
+                <span class="section-tag">⚙️ Automation</span>
+                <h2 class="section-title">Scripts and Processes</h2>
             </div>
 
             <div class="cards-grid">
@@ -103,12 +103,12 @@
                     <div class="card-icon">🔄</div>
                     <h3 class="card-title">GitHub Sync</h3>
                     <p class="card-description">
-                        Sincronización bidireccional GitHub ↔ KVM8 cada 5 minutos.
+                        Bidirectional synchronization GitHub ↔ KVM8 every 5 minutes.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li><code>sync-from-github.sh</code> - Pull automático</li>
-                        <li>Retry exponencial (2s, 4s, 8s, 16s)</li>
-                        <li>Detección de conflictos con stash</li>
+                        <li><code>sync-from-github.sh</code> - Auto pull</li>
+                        <li>Exponential retry (2s, 4s, 8s, 16s)</li>
+                        <li>Conflict detection with stash</li>
                     </ul>
                 </div>
 
@@ -116,12 +116,12 @@
                     <div class="card-icon">💾</div>
                     <h3 class="card-title">Auto Backup</h3>
                     <p class="card-description">
-                        Backup automático a GitHub cada hora con notificaciones.
+                        Automatic backup to GitHub every hour with notifications.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
                         <li><code>backup-to-github.sh</code></li>
-                        <li>Git lock para evitar conflictos</li>
-                        <li>URL de commit en notificación</li>
+                        <li>Git lock to avoid conflicts</li>
+                        <li>Commit URL in notification</li>
                     </ul>
                 </div>
 
@@ -129,12 +129,12 @@
                     <div class="card-icon">🔐</div>
                     <h3 class="card-title">Secret Redaction</h3>
                     <p class="card-description">
-                        Redacción automática de secrets antes de commits.
+                        Automatic secret redaction before commits.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li>Detecta apiKeys, tokens, passwords</li>
-                        <li>Reemplaza por [REDACTED]</li>
-                        <li>Pre-commit hook opcional</li>
+                        <li>Detects apiKeys, tokens, passwords</li>
+                        <li>Replaces with [REDACTED]</li>
+                        <li>Optional pre-commit hook</li>
                     </ul>
                 </div>
 
@@ -142,12 +142,12 @@
                     <div class="card-icon">📊</div>
                     <h3 class="card-title">Upstream Tracker</h3>
                     <p class="card-description">
-                        Monitorea actualizaciones del proyecto OpenClaw oficial.
+                        Monitors updates from the official OpenClaw project.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
                         <li><code>update-from-upstream.sh</code></li>
-                        <li>Ejecuta diariamente via cron</li>
-                        <li>Notifica nuevas versiones</li>
+                        <li>Runs daily via cron</li>
+                        <li>Notifies new versions</li>
                     </ul>
                 </div>
 
@@ -155,12 +155,12 @@
                     <div class="card-icon">🔒</div>
                     <h3 class="card-title">Git Lock</h3>
                     <p class="card-description">
-                        Sistema de locks para evitar operaciones git concurrentes.
+                        Lock system to prevent concurrent git operations.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
                         <li><code>git-lock.sh</code></li>
-                        <li>Previene race conditions</li>
-                        <li>Timeout configurable</li>
+                        <li>Prevents race conditions</li>
+                        <li>Configurable timeout</li>
                     </ul>
                 </div>
 
@@ -168,22 +168,22 @@
                     <div class="card-icon">📋</div>
                     <h3 class="card-title">Cron Manager</h3>
                     <p class="card-description">
-                        Configuración centralizada de tareas programadas.
+                        Centralized configuration for scheduled tasks.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
                         <li><code>install-crontab.sh</code></li>
-                        <li>Sync cada 5 min, backup cada hora</li>
-                        <li>Logs en /var/log/</li>
+                        <li>Sync every 5 min, backup every hour</li>
+                        <li>Logs in /var/log/</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Skills de Deploy -->
+        <!-- Deploy Skills -->
         <section class="section">
             <div class="section-header">
                 <span class="section-tag">🚀 Deploy</span>
-                <h2 class="section-title">Despliegue y Publicación</h2>
+                <h2 class="section-title">Deployment and Publishing</h2>
             </div>
 
             <div class="cards-grid">
@@ -191,50 +191,50 @@
                     <div class="card-icon">🌐</div>
                     <h3 class="card-title">Web Deploy GitHub</h3>
                     <p class="card-description">
-                        Despliega sitios web automáticamente a GitHub Pages con un comando.
+                        Deploy websites automatically to GitHub Pages with one command.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
                         <li>Templates: landing, portfolio</li>
-                        <li>Custom domains soportados</li>
-                        <li>Deploy instantáneo</li>
+                        <li>Custom domains supported</li>
+                        <li>Instant deployment</li>
                     </ul>
-                    <span class="card-link">Ver código →</span>
+                    <span class="card-link">View code →</span>
                 </a>
 
                 <div class="card">
                     <div class="card-icon">🐳</div>
                     <h3 class="card-title">Docker Deploy</h3>
                     <p class="card-description">
-                        Despliegue containerizado en VPS con docker-compose.
+                        Containerized deployment on VPS with docker-compose.
                     </p>
                     <ul style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-                        <li>Volúmenes persistentes</li>
-                        <li>Healthchecks y restart</li>
-                        <li>Configuración via .env</li>
+                        <li>Persistent volumes</li>
+                        <li>Healthchecks and restart</li>
+                        <li>Configuration via .env</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Estructura de Skills -->
+        <!-- Skills Structure -->
         <section class="section">
             <div class="section-header">
-                <span class="section-tag">📦 Estructura</span>
-                <h2 class="section-title">Cómo Funcionan los Skills</h2>
+                <span class="section-tag">📦 Structure</span>
+                <h2 class="section-title">How Skills Work</h2>
             </div>
 
             <div class="card">
-                <p class="card-description">Cada skill de OpenClaw/HAGORAGI sigue esta estructura estándar:</p>
+                <p class="card-description">Each OpenClaw/HAGORAGI skill follows this standard structure:</p>
                 <pre style="margin-top: 16px;"><code>skills/
-└── mi-skill/
-    ├── SKILL.md           # Descriptor y documentación
-    ├── BOT-INSTRUCTIONS.md # Instrucciones para el AI
+└── my-skill/
+    ├── SKILL.md           # Descriptor and documentation
+    ├── BOT-INSTRUCTIONS.md # Instructions for the AI
     ├── scripts/
-    │   └── main.sh        # Script ejecutable
-    └── entries.yaml       # Variables de entorno</code></pre>
+    │   └── main.sh        # Executable script
+    └── entries.yaml       # Environment variables</code></pre>
                 <p class="card-description mt-md">
-                    Los skills se cargan automáticamente al iniciar OpenClaw. Usan el tool <code>exec</code>
-                    para ejecutar comandos shell con los parámetros que el usuario proporciona.
+                    Skills are automatically loaded when OpenClaw starts. They use the <code>exec</code> tool
+                    to execute shell commands with parameters provided by the user.
                 </p>
             </div>
         </section>
@@ -244,7 +244,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <p>© 2026 HAGORAGI.</p>
-                <p><a href="../">← Volver al inicio</a></p>
+                <p><a href="../">← Back to Home</a></p>
             </div>
         </div>
     </footer>

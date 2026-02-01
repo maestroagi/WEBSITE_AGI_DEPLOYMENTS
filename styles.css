@@ -767,3 +767,86 @@ pre code {
     padding: 0;
     border: none;
 }
+
+/* === Parallel Changelogs (Side by Side) === */
+.changelogs-parallel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin: 40px 0;
+}
+
+.changelog-column {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.changelog-column-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.changelog-column-icon {
+    font-size: 2rem;
+}
+
+.changelog-column-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.changelog-column-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.changelog-column .changelog-entry {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--bg-primary);
+}
+
+.changelog-column .changelog-entry:last-child {
+    margin-bottom: 0;
+}
+
+.changelog-column .changelog-title {
+    font-size: 1rem;
+}
+
+.changelog-column .changelog-content li {
+    font-size: 0.875rem;
+    padding: 4px 0 4px 20px;
+}
+
+.changelog-compact .changelog-entry {
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.changelog-compact .changelog-header {
+    margin-bottom: 8px;
+}
+
+.changelog-compact .changelog-title {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.changelog-compact .changelog-content ul {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+@media (max-width: 900px) {
+    .changelogs-parallel {
+        grid-template-columns: 1fr;
+    }
+}

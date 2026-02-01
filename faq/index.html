@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="FAQ - Preguntas frecuentes">
+    <meta name="description" content="FAQ - Frequently Asked Questions">
     <title>FAQ - AGI Deployments</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -12,58 +12,58 @@
 
     <div class="container">
         <nav class="breadcrumb">
-            <a href="../">Inicio</a>
+            <a href="../">Home</a>
             <span class="breadcrumb-separator">›</span>
             <span>FAQ</span>
         </nav>
 
         <header class="page-header">
             <div class="page-icon">❓</div>
-            <h1 class="page-title">Preguntas Frecuentes</h1>
+            <h1 class="page-title">Frequently Asked Questions</h1>
             <p class="page-description">
-                Respuestas a las preguntas más comunes.
+                Answers to the most common questions.
             </p>
         </header>
 
         <div class="changelog">
             <article class="changelog-entry">
-                <h3 class="changelog-title">¿Qué es HAGORAGI?</h3>
+                <h3 class="changelog-title">What is HAGORAGI?</h3>
                 <div class="changelog-content">
-                    <p>HAGORAGI es un asistente IA personalizado basado en OpenClaw. Incluye integraciones con Telegram, Notion, y un sistema de sincronización con GitHub.</p>
+                    <p>HAGORAGI is a custom AI assistant based on OpenClaw. It includes integrations with Telegram, Notion, and a synchronization system with GitHub.</p>
                 </div>
             </article>
 
             <article class="changelog-entry">
-                <h3 class="changelog-title">¿Cuál es la diferencia entre HAGORAGI y OpenClaw?</h3>
+                <h3 class="changelog-title">What's the difference between HAGORAGI and OpenClaw?</h3>
                 <div class="changelog-content">
-                    <p>OpenClaw es el framework base (upstream). HAGORAGI es nuestra versión personalizada con skills adicionales, integraciones específicas y configuración para VPS KVM8.</p>
+                    <p>OpenClaw is the base framework (upstream). HAGORAGI is our customized version with additional skills, specific integrations, and configuration for KVM8 VPS.</p>
                 </div>
             </article>
 
             <article class="changelog-entry">
-                <h3 class="changelog-title">¿Cómo se sincroniza con GitHub?</h3>
+                <h3 class="changelog-title">How does it sync with GitHub?</h3>
                 <div class="changelog-content">
-                    <p>Scripts automatizados via cron cada 5 minutos. <code>sync-from-github.sh</code> trae cambios y <code>backup-to-github.sh</code> sube cambios locales.</p>
+                    <p>Automated scripts via cron every 5 minutes. <code>sync-from-github.sh</code> pulls changes and <code>backup-to-github.sh</code> pushes local changes.</p>
                 </div>
             </article>
 
             <article class="changelog-entry">
-                <h3 class="changelog-title">¿Por qué no recibo notificaciones de Telegram?</h3>
+                <h3 class="changelog-title">Why am I not receiving Telegram notifications?</h3>
                 <div class="changelog-content">
-                    <p>Verifica que <code>scripts/notify.env</code> tiene <code>TELEGRAM_NOTIFY_CHAT_ID</code> y <code>TELEGRAM_NOTIFY_BOT_TOKEN</code>. Consulta el <a href="https://github.com/maestroagi/openclaw-workspace/blob/main/docs/RUNBOOK.md">RUNBOOK</a>.</p>
+                    <p>Check that <code>scripts/notify.env</code> has <code>TELEGRAM_NOTIFY_CHAT_ID</code> and <code>TELEGRAM_NOTIFY_BOT_TOKEN</code>. See the <a href="https://github.com/maestroagi/openclaw-workspace/blob/main/docs/RUNBOOK.md">RUNBOOK</a>.</p>
                 </div>
             </article>
 
             <article class="changelog-entry">
-                <h3 class="changelog-title">¿Cómo añado un nuevo skill?</h3>
+                <h3 class="changelog-title">How do I add a new skill?</h3>
                 <div class="changelog-content">
-                    <p>Crea una carpeta en <code>skills/</code> con un <code>SKILL.md</code>. Opcionalmente incluye scripts que se ejecuten con <code>exec</code>.</p>
+                    <p>Create a folder in <code>skills/</code> with a <code>SKILL.md</code>. Optionally include scripts that run with <code>exec</code>.</p>
                 </div>
             </article>
         </div>
 
         <div class="text-center mt-xl">
-            <a href="../documentacion/" class="btn btn-secondary">Ver documentación completa</a>
+            <a href="../documentacion/" class="btn btn-secondary">View full documentation</a>
         </div>
     </div>
 
@@ -71,7 +71,7 @@
         <div class="container">
             <div class="footer-bottom">
                 <p>© 2026 HAGORAGI.</p>
-                <p><a href="../">← Volver al inicio</a></p>
+                <p><a href="../">← Back to Home</a></p>
             </div>
         </div>
     </footer>

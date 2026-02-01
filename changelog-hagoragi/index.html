@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Changelog HAGORAGI Bot - Historial de cambios y mejoras personalizadas">
+    <meta name="description" content="Changelog HAGORAGI Bot - History of custom changes and improvements">
     <title>Changelog HAGORAGI - AGI Deployments</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
@@ -12,7 +12,7 @@
 
     <div class="container">
         <nav class="breadcrumb">
-            <a href="../">Inicio</a>
+            <a href="../">Home</a>
             <span class="breadcrumb-separator">›</span>
             <span>Changelog HAGORAGI</span>
         </nav>
@@ -21,8 +21,8 @@
             <div class="page-icon">🤖</div>
             <h1 class="page-title">Changelog HAGORAGI Bot</h1>
             <p class="page-description">
-                Historial de cambios personalizados: skills, integraciones, scripts y mejoras del workspace.
-                <strong>No incluye cambios de OpenClaw oficial.</strong>
+                History of custom changes: skills, integrations, scripts, and workspace improvements.
+                <strong>Does not include official OpenClaw changes.</strong>
             </p>
         </header>
 
@@ -32,12 +32,12 @@
             <a href="../changelog-openclaw/" class="tab">🔧 OpenClaw Official</a>
         </div>
 
-        <!-- Info: Skills activos -->
+        <!-- Info: Active Skills -->
         <div class="card mb-lg">
             <div class="section-header">
-                <span class="section-tag">🧩 Skills Activos</span>
+                <span class="section-tag">🧩 Active Skills</span>
             </div>
-            <p class="card-description">HAGORAGI cuenta actualmente con <strong>15+ skills personalizados</strong>:</p>
+            <p class="card-description">HAGORAGI currently has <strong>15+ custom skills</strong>:</p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 16px;">
                 <span style="padding: 8px 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.9rem;">📝 Notion Integration</span>
                 <span style="padding: 8px 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.9rem;">🌐 Web Deploy GitHub</span>
@@ -53,7 +53,7 @@
                 <span style="padding: 8px 12px; background: var(--bg-primary); border-radius: 8px; font-size: 0.9rem;">🔒 Git Lock</span>
             </div>
             <p class="mt-md">
-                <a href="../skills/" class="btn btn-secondary">Ver todos los skills →</a>
+                <a href="../skills/" class="btn btn-secondary">View all skills →</a>
             </p>
         </div>
 
@@ -61,203 +61,203 @@
         <div class="changelog">
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">1 Febrero 2026</span>
+                    <span class="changelog-date">February 1, 2026</span>
                     <span class="changelog-version">v2.2.0</span>
                 </div>
-                <h3 class="changelog-title">Navegación dinámica y corrección de rutas</h3>
+                <h3 class="changelog-title">Dynamic navigation and path fixes</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-fix">fix</span> Navegación ahora detecta profundidad y genera rutas correctas</li>
-                        <li><span class="tag tag-fix">fix</span> Enlaces funcionan desde cualquier subdirectorio</li>
-                        <li><span class="tag tag-improvement">improvement</span> getBasePath() dinámico en script.js</li>
-                        <li><span class="tag tag-improvement">improvement</span> Template consistente verificado en todas las páginas</li>
+                        <li><span class="tag tag-fix">fix</span> Navigation now detects depth and generates correct paths</li>
+                        <li><span class="tag tag-fix">fix</span> Links work from any subdirectory</li>
+                        <li><span class="tag tag-improvement">improvement</span> Dynamic getBasePath() in script.js</li>
+                        <li><span class="tag tag-improvement">improvement</span> Consistent template verified on all pages</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">1 Febrero 2026</span>
+                    <span class="changelog-date">February 1, 2026</span>
                     <span class="changelog-version">v2.1.0</span>
                 </div>
-                <h3 class="changelog-title">Nuevo sitio web modular y fix de notificaciones</h3>
+                <h3 class="changelog-title">New modular website and notification fix</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Nuevo sitio web con template unificado y consistente</li>
-                        <li><span class="tag tag-feature">feature</span> Sistema de temas (oscuro/claro) con persistencia localStorage</li>
-                        <li><span class="tag tag-feature">feature</span> Dos changelogs separados: HAGORAGI (cambios propios) + OpenClaw (upstream)</li>
-                        <li><span class="tag tag-feature">feature</span> Navegación con dropdowns y menú móvil responsive</li>
-                        <li><span class="tag tag-fix">fix</span> Corregido spam de notificaciones "copia interna" cada 5 min</li>
-                        <li><span class="tag tag-improvement">improvement</span> backup-openclaw-code.sh usa rsync --itemize-changes</li>
-                        <li><span class="tag tag-improvement">improvement</span> Solo notifica cuando hay cambios reales detectados</li>
+                        <li><span class="tag tag-feature">feature</span> New website with unified and consistent template</li>
+                        <li><span class="tag tag-feature">feature</span> Theme system (dark/light) with localStorage persistence</li>
+                        <li><span class="tag tag-feature">feature</span> Two separate changelogs: HAGORAGI (custom changes) + OpenClaw (upstream)</li>
+                        <li><span class="tag tag-feature">feature</span> Navigation with dropdowns and responsive mobile menu</li>
+                        <li><span class="tag tag-fix">fix</span> Fixed "internal copy" notification spam every 5 min</li>
+                        <li><span class="tag tag-improvement">improvement</span> backup-openclaw-code.sh uses rsync --itemize-changes</li>
+                        <li><span class="tag tag-improvement">improvement</span> Only notifies when real changes detected</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">31 Enero 2026</span>
+                    <span class="changelog-date">January 31, 2026</span>
                     <span class="changelog-version">v2.0.0</span>
                 </div>
-                <h3 class="changelog-title">Notificaciones Telegram y sincronización mejorada</h3>
+                <h3 class="changelog-title">Telegram notifications and improved sync</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Scripts cargan notify.env automáticamente (TELEGRAM_BOT_TOKEN, CHAT_ID)</li>
-                        <li><span class="tag tag-feature">feature</span> Creado notify.env.example como plantilla segura</li>
-                        <li><span class="tag tag-feature">feature</span> Script copy-notify-scripts-to-openclaw.sh para deployment</li>
-                        <li><span class="tag tag-feature">feature</span> Documentación completa README-notify-sync.md</li>
-                        <li><span class="tag tag-fix">fix</span> Notificaciones Telegram ahora funcionan correctamente en cron</li>
-                        <li><span class="tag tag-improvement">improvement</span> Mensajes de notificación con formato Markdown</li>
+                        <li><span class="tag tag-feature">feature</span> Scripts auto-load notify.env (TELEGRAM_BOT_TOKEN, CHAT_ID)</li>
+                        <li><span class="tag tag-feature">feature</span> Created notify.env.example as safe template</li>
+                        <li><span class="tag tag-feature">feature</span> Script copy-notify-scripts-to-openclaw.sh for deployment</li>
+                        <li><span class="tag tag-feature">feature</span> Complete documentation README-notify-sync.md</li>
+                        <li><span class="tag tag-fix">fix</span> Telegram notifications now work correctly in cron</li>
+                        <li><span class="tag tag-improvement">improvement</span> Notification messages with Markdown format</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">30 Enero 2026</span>
+                    <span class="changelog-date">January 30, 2026</span>
                     <span class="changelog-version">v1.9.0</span>
                 </div>
-                <h3 class="changelog-title">Skill Notion con exec tool</h3>
+                <h3 class="changelog-title">Notion skill with exec tool</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Skill de Notion migrado a usar exec tool de OpenClaw</li>
-                        <li><span class="tag tag-feature">feature</span> add-to-notion-backlog.sh con NOTION_DATABASE_ID configurable</li>
-                        <li><span class="tag tag-feature">feature</span> Nuevo docs/NOTION-SETUP.md con guía completa</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para propiedades: título, URL, categoría, prioridad</li>
-                        <li><span class="tag tag-fix">fix</span> Troubleshooting para "Tool not found" en skills</li>
+                        <li><span class="tag tag-feature">feature</span> Notion skill migrated to use OpenClaw exec tool</li>
+                        <li><span class="tag tag-feature">feature</span> add-to-notion-backlog.sh with configurable NOTION_DATABASE_ID</li>
+                        <li><span class="tag tag-feature">feature</span> New docs/NOTION-SETUP.md with complete guide</li>
+                        <li><span class="tag tag-feature">feature</span> Support for properties: title, URL, category, priority</li>
+                        <li><span class="tag tag-fix">fix</span> Troubleshooting for "Tool not found" in skills</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">29 Enero 2026</span>
+                    <span class="changelog-date">January 29, 2026</span>
                     <span class="changelog-version">v1.8.0</span>
                 </div>
-                <h3 class="changelog-title">Robustez en scripts de automatización</h3>
+                <h3 class="changelog-title">Robustness in automation scripts</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> sync-from-github.sh con retry exponencial (2s, 4s, 8s, 16s)</li>
-                        <li><span class="tag tag-feature">feature</span> backup-to-github.sh con git-lock.sh para evitar conflictos</li>
-                        <li><span class="tag tag-security">security</span> Redacción automática de apiKeys, tokens y secrets en backups</li>
-                        <li><span class="tag tag-feature">feature</span> Notificaciones incluyen URL directa al commit en GitHub</li>
-                        <li><span class="tag tag-feature">feature</span> docs/RUNBOOK.md con troubleshooting de errores comunes</li>
-                        <li><span class="tag tag-improvement">improvement</span> Logs detallados con timestamps en /var/log/</li>
+                        <li><span class="tag tag-feature">feature</span> sync-from-github.sh with exponential retry (2s, 4s, 8s, 16s)</li>
+                        <li><span class="tag tag-feature">feature</span> backup-to-github.sh with git-lock.sh to avoid conflicts</li>
+                        <li><span class="tag tag-security">security</span> Automatic redaction of apiKeys, tokens, and secrets in backups</li>
+                        <li><span class="tag tag-feature">feature</span> Notifications include direct URL to commit on GitHub</li>
+                        <li><span class="tag tag-feature">feature</span> docs/RUNBOOK.md with common error troubleshooting</li>
+                        <li><span class="tag tag-improvement">improvement</span> Detailed logs with timestamps in /var/log/</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">28 Enero 2026</span>
+                    <span class="changelog-date">January 28, 2026</span>
                     <span class="changelog-version">v1.7.0</span>
                 </div>
                 <h3 class="changelog-title">Skill web-deploy-github</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Nuevo skill para deploy automático a GitHub Pages</li>
-                        <li><span class="tag tag-feature">feature</span> Template de landing page minimalista</li>
-                        <li><span class="tag tag-feature">feature</span> Template de portfolio con cards</li>
-                        <li><span class="tag tag-feature">feature</span> BOT-INSTRUCTIONS.md con ejemplos de uso</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para custom domains</li>
+                        <li><span class="tag tag-feature">feature</span> New skill for automatic deploy to GitHub Pages</li>
+                        <li><span class="tag tag-feature">feature</span> Minimalist landing page template</li>
+                        <li><span class="tag tag-feature">feature</span> Portfolio template with cards</li>
+                        <li><span class="tag tag-feature">feature</span> BOT-INSTRUCTIONS.md with usage examples</li>
+                        <li><span class="tag tag-feature">feature</span> Custom domains support</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">27 Enero 2026</span>
+                    <span class="changelog-date">January 27, 2026</span>
                     <span class="changelog-version">v1.6.0</span>
                 </div>
-                <h3 class="changelog-title">Skill Slack mejorado</h3>
+                <h3 class="changelog-title">Improved Slack skill</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Envío de mensajes a canales y DMs</li>
-                        <li><span class="tag tag-feature">feature</span> Soporte para Slack Blocks (rich formatting)</li>
-                        <li><span class="tag tag-feature">feature</span> Lectura de mensajes recientes de canales</li>
-                        <li><span class="tag tag-improvement">improvement</span> Manejo de rate limits de Slack API</li>
+                        <li><span class="tag tag-feature">feature</span> Send messages to channels and DMs</li>
+                        <li><span class="tag tag-feature">feature</span> Slack Blocks support (rich formatting)</li>
+                        <li><span class="tag tag-feature">feature</span> Read recent messages from channels</li>
+                        <li><span class="tag tag-improvement">improvement</span> Slack API rate limits handling</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">25 Enero 2026</span>
+                    <span class="changelog-date">January 25, 2026</span>
                     <span class="changelog-version">v1.5.0</span>
                 </div>
-                <h3 class="changelog-title">Integración Telegram Bot</h3>
+                <h3 class="changelog-title">Telegram Bot Integration</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> @hagoragi_bot como interfaz principal de chat móvil</li>
-                        <li><span class="tag tag-feature">feature</span> Bot secundario dedicado para notificaciones del sistema</li>
-                        <li><span class="tag tag-feature">feature</span> Script telegram-notify.sh con soporte Markdown</li>
-                        <li><span class="tag tag-feature">feature</span> Notificaciones automáticas de sync, backup, upstream updates</li>
-                        <li><span class="tag tag-feature">feature</span> Comandos: /status, /sync, /backup, /help</li>
+                        <li><span class="tag tag-feature">feature</span> @hagoragi_bot as main mobile chat interface</li>
+                        <li><span class="tag tag-feature">feature</span> Secondary bot dedicated to system notifications</li>
+                        <li><span class="tag tag-feature">feature</span> telegram-notify.sh script with Markdown support</li>
+                        <li><span class="tag tag-feature">feature</span> Automatic notifications for sync, backup, upstream updates</li>
+                        <li><span class="tag tag-feature">feature</span> Commands: /status, /sync, /backup, /help</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">23 Enero 2026</span>
+                    <span class="changelog-date">January 23, 2026</span>
                     <span class="changelog-version">v1.4.0</span>
                 </div>
-                <h3 class="changelog-title">Sistema de cron automatizado</h3>
+                <h3 class="changelog-title">Automated cron system</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Cron cada 5 min: sync-from-github.sh</li>
-                        <li><span class="tag tag-feature">feature</span> Cron cada hora: backup-to-github.sh</li>
-                        <li><span class="tag tag-feature">feature</span> Cron diario: update-from-upstream.sh</li>
-                        <li><span class="tag tag-feature">feature</span> Script install-crontab.sh para configuración automática</li>
+                        <li><span class="tag tag-feature">feature</span> Cron every 5 min: sync-from-github.sh</li>
+                        <li><span class="tag tag-feature">feature</span> Cron every hour: backup-to-github.sh</li>
+                        <li><span class="tag tag-feature">feature</span> Daily cron: update-from-upstream.sh</li>
+                        <li><span class="tag tag-feature">feature</span> install-crontab.sh script for automatic configuration</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">22 Enero 2026</span>
+                    <span class="changelog-date">January 22, 2026</span>
                     <span class="changelog-version">v1.3.0</span>
                 </div>
-                <h3 class="changelog-title">Docker Compose para VPS</h3>
+                <h3 class="changelog-title">Docker Compose for VPS</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> docker-compose.yml para despliegue en VPS</li>
-                        <li><span class="tag tag-feature">feature</span> Volúmenes persistentes para datos y configuración</li>
-                        <li><span class="tag tag-feature">feature</span> Healthchecks y restart automático</li>
-                        <li><span class="tag tag-feature">feature</span> Documentación vps-config/README.md</li>
+                        <li><span class="tag tag-feature">feature</span> docker-compose.yml for VPS deployment</li>
+                        <li><span class="tag tag-feature">feature</span> Persistent volumes for data and configuration</li>
+                        <li><span class="tag tag-feature">feature</span> Healthchecks and automatic restart</li>
+                        <li><span class="tag tag-feature">feature</span> vps-config/README.md documentation</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">21 Enero 2026</span>
+                    <span class="changelog-date">January 21, 2026</span>
                     <span class="changelog-version">v1.2.0</span>
                 </div>
-                <h3 class="changelog-title">Sincronización GitHub ↔ KVM8</h3>
+                <h3 class="changelog-title">GitHub ↔ KVM8 Synchronization</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Script sync-from-github.sh para pull automático</li>
-                        <li><span class="tag tag-feature">feature</span> Script backup-to-github.sh para push de cambios</li>
-                        <li><span class="tag tag-feature">feature</span> Detección de conflictos con stash automático</li>
-                        <li><span class="tag tag-security">security</span> SSH keys sin passphrase para cron</li>
+                        <li><span class="tag tag-feature">feature</span> sync-from-github.sh script for automatic pull</li>
+                        <li><span class="tag tag-feature">feature</span> backup-to-github.sh script for pushing changes</li>
+                        <li><span class="tag tag-feature">feature</span> Conflict detection with automatic stash</li>
+                        <li><span class="tag tag-security">security</span> SSH keys without passphrase for cron</li>
                     </ul>
                 </div>
             </article>
 
             <article class="changelog-entry">
                 <div class="changelog-header">
-                    <span class="changelog-date">20 Enero 2026</span>
+                    <span class="changelog-date">January 20, 2026</span>
                     <span class="changelog-version">v1.0.0</span>
                 </div>
-                <h3 class="changelog-title">Release inicial HAGORAGI</h3>
+                <h3 class="changelog-title">HAGORAGI initial release</h3>
                 <div class="changelog-content">
                     <ul>
-                        <li><span class="tag tag-feature">feature</span> Fork de OpenClaw con configuración personalizada para KVM8</li>
-                        <li><span class="tag tag-feature">feature</span> Skill inicial: Notion para guardar links en Backlog</li>
-                        <li><span class="tag tag-feature">feature</span> Skill inicial: Slack para mensajería</li>
-                        <li><span class="tag tag-feature">feature</span> Documentación de arquitectura docs/ARCHITECTURE-KVM8.md</li>
-                        <li><span class="tag tag-feature">feature</span> MEMORY.md para contexto persistente del asistente</li>
+                        <li><span class="tag tag-feature">feature</span> OpenClaw fork with custom configuration for KVM8</li>
+                        <li><span class="tag tag-feature">feature</span> Initial skill: Notion to save links in Backlog</li>
+                        <li><span class="tag tag-feature">feature</span> Initial skill: Slack for messaging</li>
+                        <li><span class="tag tag-feature">feature</span> Architecture documentation docs/ARCHITECTURE-KVM8.md</li>
+                        <li><span class="tag tag-feature">feature</span> MEMORY.md for persistent assistant context</li>
                     </ul>
                 </div>
             </article>
@@ -267,8 +267,8 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
-                <p>© 2026 HAGORAGI. Basado en <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw</a>.</p>
-                <p><a href="../">← Volver al inicio</a></p>
+                <p>© 2026 HAGORAGI. Based on <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw</a>.</p>
+                <p><a href="../">← Back to Home</a></p>
             </div>
         </div>
     </footer>
