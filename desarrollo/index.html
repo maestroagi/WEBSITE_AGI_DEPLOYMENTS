@@ -3,77 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desarrollo - Herramientas y componentes en desarrollo">
+    <meta name="description" content="Desarrollo - Herramientas y componentes">
     <title>Desarrollo - AGI Deployments</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <nav class="navbar"><div class="navbar-container"><a href="../" class="navbar-brand"><span class="navbar-brand-icon">◈</span><span>AGI<span style="color: var(--color-accent);">Deploy</span></span></a><button class="navbar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><ul class="navbar-menu"><li><a href="../" class="navbar-link">Inicio</a></li><li class="navbar-dropdown"><a href="#" class="navbar-link">Documentación ▾</a><div class="navbar-dropdown-menu"><a href="../documentacion/" class="navbar-dropdown-item">General</a><a href="../api/" class="navbar-dropdown-item">API</a><a href="../tutoriales/" class="navbar-dropdown-item">Tutoriales</a><a href="../faq/" class="navbar-dropdown-item">FAQ</a></div></li><li class="navbar-dropdown"><a href="#" class="navbar-link active">Proyectos ▾</a><div class="navbar-dropdown-menu"><a href="../proyectos/" class="navbar-dropdown-item">Todos</a><a href="../investigacion/" class="navbar-dropdown-item">Investigación</a><a href="./" class="navbar-dropdown-item">Desarrollo</a></div></li><li><a href="../comunidad/" class="navbar-link">Comunidad</a></li><li><a href="../cambios/" class="navbar-link">Changelog</a></li><li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="navbar-link">GitHub</a></li><li><button class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li></ul></div></nav>
+    <div id="site-nav"></div>
 
-    <main class="main-content">
-        <div class="container">
-            <nav class="breadcrumb"><a href="../">Inicio</a><span class="breadcrumb-separator">›</span><a href="../proyectos/">Proyectos</a><span class="breadcrumb-separator">›</span><span>Desarrollo</span></nav>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../">Inicio</a>
+            <span class="breadcrumb-separator">›</span>
+            <span>Desarrollo</span>
+        </nav>
 
-            <div class="page-header">
-                <h1 class="page-title">Desarrollo</h1>
-                <p class="page-description">Herramientas, skills y componentes en desarrollo activo.</p>
-            </div>
+        <header class="page-header">
+            <div class="page-icon">💻</div>
+            <h1 class="page-title">Desarrollo</h1>
+            <p class="page-description">
+                Herramientas, scripts y componentes en desarrollo activo.
+            </p>
+        </header>
 
-            <div class="cards-grid">
-                <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/skills" target="_blank" class="card">
-                    <div class="card-icon">🔧</div>
-                    <h3 class="card-title">Skills</h3>
-                    <p class="card-description">Módulos que extienden las capacidades del asistente: Notion, Web Deploy, Slack.</p>
-                </a>
+        <div class="cards-grid">
+            <a href="../skills/" class="card">
+                <div class="card-icon">🧩</div>
+                <h3 class="card-title">Skills</h3>
+                <p class="card-description">Módulos que extienden las capacidades: Notion, Web Deploy, Slack.</p>
+            </a>
 
-                <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/scripts" target="_blank" class="card">
-                    <div class="card-icon">📜</div>
-                    <h3 class="card-title">Scripts de Automatización</h3>
-                    <p class="card-description">Scripts bash para sync, backup, notificaciones y deployment.</p>
-                </a>
+            <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/scripts" target="_blank" class="card">
+                <div class="card-icon">📜</div>
+                <h3 class="card-title">Scripts de Automatización</h3>
+                <p class="card-description">Scripts bash para sync, backup, notificaciones.</p>
+            </a>
 
-                <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/vps-config" target="_blank" class="card">
-                    <div class="card-icon">🐳</div>
-                    <h3 class="card-title">Configuración Docker</h3>
-                    <p class="card-description">Docker Compose y configuración para desplegar en VPS.</p>
-                </a>
+            <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/vps-config" target="_blank" class="card">
+                <div class="card-icon">🐳</div>
+                <h3 class="card-title">Configuración Docker</h3>
+                <p class="card-description">Docker Compose para desplegar en VPS.</p>
+            </a>
 
-                <a href="../api/" class="card">
-                    <div class="card-icon">⚡</div>
-                    <h3 class="card-title">API Gateway</h3>
-                    <p class="card-description">Endpoints REST para interactuar con el asistente programáticamente.</p>
-                </a>
+            <a href="../api/" class="card">
+                <div class="card-icon">⚡</div>
+                <h3 class="card-title">API Gateway</h3>
+                <p class="card-description">Endpoints REST para interactuar con el asistente.</p>
+            </a>
 
-                <a href="https://github.com/maestroagi/WEBSITE_AGI_DEPLOYMENTS" target="_blank" class="card">
-                    <div class="card-icon">🌐</div>
-                    <h3 class="card-title">Website</h3>
-                    <p class="card-description">Este sitio web modular con sistema de temas y changelogs automáticos.</p>
-                </a>
+            <a href="https://github.com/maestroagi/WEBSITE_AGI_DEPLOYMENTS" target="_blank" class="card">
+                <div class="card-icon">🌐</div>
+                <h3 class="card-title">Website</h3>
+                <p class="card-description">Este sitio web modular.</p>
+            </a>
 
-                <a href="https://github.com/maestroagi/openclaw-workspace/issues" target="_blank" class="card">
-                    <div class="card-icon">📋</div>
-                    <h3 class="card-title">Roadmap</h3>
-                    <p class="card-description">Ver issues abiertos y próximas funcionalidades planificadas.</p>
-                </a>
-            </div>
-
-            <section class="section">
-                <h2>Contribuir</h2>
-                <div class="card">
-                    <p class="card-description">¿Quieres contribuir al desarrollo? Revisa los issues abiertos, haz un fork del repositorio y envía un pull request. Toda contribución es bienvenida.</p>
-                    <div class="mt-lg">
-                        <a href="https://github.com/maestroagi/openclaw-workspace/pulls" target="_blank" class="btn btn-primary">Ver pull requests</a>
-                        <a href="https://github.com/maestroagi/openclaw-workspace/issues/new" target="_blank" class="btn btn-secondary">Crear issue</a>
-                    </div>
-                </div>
-            </section>
+            <a href="https://github.com/maestroagi/openclaw-workspace/issues" target="_blank" class="card">
+                <div class="card-icon">📋</div>
+                <h3 class="card-title">Roadmap</h3>
+                <p class="card-description">Issues abiertos y próximas features.</p>
+            </a>
         </div>
-    </main>
 
-    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 AGI Deployments.</p><p><a href="../">Volver al inicio</a></p></div></div></footer>
-    <script src="../assets/js/main.js"></script>
+        <section class="section">
+            <h2 class="section-title">Contribuir</h2>
+            <div class="card">
+                <p class="card-description">¿Quieres contribuir? Revisa los issues, haz fork y envía un PR.</p>
+                <div class="mt-lg">
+                    <a href="https://github.com/maestroagi/openclaw-workspace/pulls" target="_blank" class="btn btn-primary">Ver pull requests</a>
+                    <a href="https://github.com/maestroagi/openclaw-workspace/issues/new" target="_blank" class="btn btn-secondary">Crear issue</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 HAGORAGI.</p>
+                <p><a href="../">← Volver al inicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>

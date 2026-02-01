@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Changelog OpenClaw Official - Actualizaciones del proyecto upstream">
+    <title>Changelog OpenClaw Official - AGI Deployments</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="site-nav"></div>
+
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../">Inicio</a>
+            <span class="breadcrumb-separator">›</span>
+            <span>Changelog OpenClaw</span>
+        </nav>
+
+        <header class="page-header">
+            <div class="page-icon">🔧</div>
+            <h1 class="page-title">Changelog OpenClaw Official</h1>
+            <p class="page-description">
+                Actualizaciones del proyecto OpenClaw original (upstream).
+                Sincronizamos estos cambios mediante <code>update-from-upstream.sh</code>.
+            </p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <a href="../changelog-hagoragi/" class="tab">🤖 HAGORAGI Bot</a>
+            <button class="tab active">🔧 OpenClaw Official</button>
+        </div>
+
+        <!-- Changelog -->
+        <div class="changelog">
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">30 Enero 2026</span>
+                    <span class="changelog-version">v0.15.0</span>
+                </div>
+                <h3 class="changelog-title">Mejoras de rendimiento y caché</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-feature">feature</span> Nuevo sistema de caché para respuestas de LLM</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para múltiples proveedores de embeddings</li>
+                        <li><span class="tag tag-fix">fix</span> Corrección de memory leaks en sesiones largas</li>
+                        <li><span class="tag tag-breaking">breaking</span> Cambio en formato de configuración de skills</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.15.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">25 Enero 2026</span>
+                    <span class="changelog-version">v0.14.2</span>
+                </div>
+                <h3 class="changelog-title">Correcciones de bugs</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-fix">fix</span> Corregido error de timeout en llamadas a API</li>
+                        <li><span class="tag tag-fix">fix</span> Mejora en manejo de errores de red</li>
+                        <li><span class="tag tag-security">security</span> Actualización de dependencias de seguridad</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.14.2" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">20 Enero 2026</span>
+                    <span class="changelog-version">v0.14.0</span>
+                </div>
+                <h3 class="changelog-title">Nueva UI y streaming</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-feature">feature</span> Nueva interfaz web con diseño mejorado</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para streaming de respuestas</li>
+                        <li><span class="tag tag-feature">feature</span> Nuevo skill de calendario</li>
+                        <li><span class="tag tag-fix">fix</span> Corrección en parsing de markdown</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.14.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">15 Enero 2026</span>
+                    <span class="changelog-version">v0.13.0</span>
+                </div>
+                <h3 class="changelog-title">Sistema de Skills mejorado</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-feature">feature</span> Nuevo formato de skills con SKILL.md</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para skills con dependencias</li>
+                        <li><span class="tag tag-feature">feature</span> Herramienta exec para ejecutar comandos</li>
+                        <li><span class="tag tag-breaking">breaking</span> Deprecado formato antiguo de skills</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.13.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="changelog-entry">
+                <div class="changelog-header">
+                    <span class="changelog-date">10 Enero 2026</span>
+                    <span class="changelog-version">v0.12.0</span>
+                </div>
+                <h3 class="changelog-title">Release inicial público</h3>
+                <div class="changelog-content">
+                    <ul>
+                        <li><span class="tag tag-feature">feature</span> Release inicial de OpenClaw</li>
+                        <li><span class="tag tag-feature">feature</span> Soporte para OpenAI, Anthropic y modelos locales</li>
+                        <li><span class="tag tag-feature">feature</span> Sistema de skills extensible</li>
+                        <li><span class="tag tag-feature">feature</span> Interfaz web y CLI</li>
+                    </ul>
+                    <p class="mt-md">
+                        <a href="https://github.com/openclaw/openclaw/releases/tag/v0.12.0" target="_blank" class="btn btn-secondary">
+                            Ver release en GitHub →
+                        </a>
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <!-- Info box -->
+        <div class="card mt-xl">
+            <div class="card-icon">🔄</div>
+            <h3 class="card-title">Sincronización Automática</h3>
+            <p class="card-description">
+                Los cambios upstream se sincronizan ejecutando <code>update-from-upstream.sh</code>.
+                Este script trae los últimos cambios del repositorio oficial de OpenClaw.
+            </p>
+            <p class="mt-md">
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="btn btn-primary">
+                    Ver repositorio upstream →
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 HAGORAGI. Basado en <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw</a>.</p>
+                <p><a href="../">← Volver al inicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

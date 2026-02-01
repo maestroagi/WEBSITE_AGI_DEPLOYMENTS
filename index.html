@@ -3,237 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AGI Deployments - Portal Central del Proyecto OpenClaw. Documentación, cambios, recursos y herramientas para el desarrollo de IA.">
+    <meta name="description" content="HAGORAGI Bot - Asistente IA personalizado basado en OpenClaw. Portal central con documentación, changelogs y recursos.">
     <meta name="theme-color" content="#6366f1">
-    <title>AGI Deployments - Portal Central</title>
+    <title>HAGORAGI - Portal Central</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navegación Principal -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="./" class="navbar-brand">
-                <span class="navbar-brand-icon">◈</span>
-                <span>AGI<span style="color: var(--color-accent);">Deploy</span></span>
-            </a>
-
-            <button class="navbar-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-            <ul class="navbar-menu">
-                <li><a href="./" class="navbar-link active">Inicio</a></li>
-                <li class="navbar-dropdown">
-                    <a href="#" class="navbar-link">Documentación ▾</a>
-                    <div class="navbar-dropdown-menu">
-                        <a href="documentacion/" class="navbar-dropdown-item">General</a>
-                        <a href="api/" class="navbar-dropdown-item">API Reference</a>
-                        <a href="tutoriales/" class="navbar-dropdown-item">Tutoriales</a>
-                        <a href="faq/" class="navbar-dropdown-item">FAQ</a>
-                    </div>
-                </li>
-                <li class="navbar-dropdown">
-                    <a href="#" class="navbar-link">Proyectos ▾</a>
-                    <div class="navbar-dropdown-menu">
-                        <a href="proyectos/" class="navbar-dropdown-item">Todos los Proyectos</a>
-                        <a href="investigacion/" class="navbar-dropdown-item">Investigación</a>
-                        <a href="desarrollo/" class="navbar-dropdown-item">Desarrollo</a>
-                    </div>
-                </li>
-                <li><a href="comunidad/" class="navbar-link">Comunidad</a></li>
-                <li><a href="cambios/" class="navbar-link">Changelog</a></li>
-                <li>
-                    <a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="navbar-link">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 4px;">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                        </svg>
-                        GitHub
-                    </a>
-                </li>
-                <li>
-                    <button class="theme-toggle" aria-label="Cambiar tema">
-                        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="5"/>
-                            <line x1="12" y1="1" x2="12" y2="3"/>
-                            <line x1="12" y1="21" x2="12" y2="23"/>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                            <line x1="1" y1="12" x2="3" y2="12"/>
-                            <line x1="21" y1="12" x2="23" y2="12"/>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                        </svg>
-                        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <div id="site-nav"></div>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="hero-badge-dot"></span>
-                    Plataforma Activa
-                </div>
-                <h1 class="hero-title">
-                    Portal Central<br>
-                    <span class="hero-title-gradient">AGI Deployments</span>
-                </h1>
-                <p class="hero-description">
-                    Documentación, changelogs, recursos y herramientas para el proyecto OpenClaw.
-                    Mantente al día con los últimos cambios y desarrollos.
-                </p>
-                <div class="hero-actions">
-                    <a href="cambios/" class="btn btn-primary btn-lg">
-                        Ver Changelog
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                    </a>
-                    <a href="documentacion/" class="btn btn-outline btn-lg">
-                        Documentación
-                    </a>
-                </div>
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                Sistema Activo
+            </div>
+            <h1 class="hero-title">
+                Portal Central<br>
+                <span class="hero-gradient">HAGORAGI Bot</span>
+            </h1>
+            <p class="hero-description">
+                Asistente IA personalizado basado en OpenClaw. Documentación, changelogs, recursos y herramientas para el desarrollo.
+            </p>
+            <div class="hero-actions">
+                <a href="changelog-hagoragi/" class="btn btn-primary">
+                    🤖 Changelog HAGORAGI
+                </a>
+                <a href="changelog-openclaw/" class="btn btn-secondary">
+                    🔧 Changelog OpenClaw
+                </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Contenido Principal -->
-    <main class="main-content">
-        <div class="container">
-            <!-- Sección de Acceso Rápido -->
-            <section class="section">
-                <div class="section-header">
-                    <span class="section-tag">Acceso Rápido</span>
-                    <h2 class="section-title">Explora el Proyecto</h2>
-                    <p class="section-description">
-                        Navega por las diferentes secciones del portal
-                    </p>
-                </div>
-
-                <div class="cards-grid">
-                    <a href="cambios/" class="card">
-                        <div class="card-icon">📋</div>
-                        <h3 class="card-title">Changelog Workspace</h3>
-                        <p class="card-description">Historial de cambios realizados en nuestro workspace personalizado.</p>
-                    </a>
-
-                    <a href="cambios-upstream/" class="card">
-                        <div class="card-icon">🔄</div>
-                        <h3 class="card-title">Changelog Upstream</h3>
-                        <p class="card-description">Actualizaciones oficiales recibidas del proyecto OpenClaw original.</p>
-                    </a>
-
-                    <a href="documentacion/" class="card">
-                        <div class="card-icon">📚</div>
-                        <h3 class="card-title">Documentación</h3>
-                        <p class="card-description">Guías, tutoriales y referencia técnica del sistema.</p>
-                    </a>
-
-                    <a href="api/" class="card">
-                        <div class="card-icon">⚡</div>
-                        <h3 class="card-title">API Reference</h3>
-                        <p class="card-description">Documentación de la API y endpoints disponibles.</p>
-                    </a>
-
-                    <a href="proyectos/" class="card">
-                        <div class="card-icon">🚀</div>
-                        <h3 class="card-title">Proyectos</h3>
-                        <p class="card-description">Subproyectos y experimentos en desarrollo.</p>
-                    </a>
-
-                    <a href="seguridad/" class="card">
-                        <div class="card-icon">🔒</div>
-                        <h3 class="card-title">Seguridad</h3>
-                        <p class="card-description">Políticas, auditorías y protocolos de seguridad.</p>
-                    </a>
-
-                    <a href="comunidad/" class="card">
-                        <div class="card-icon">🌐</div>
-                        <h3 class="card-title">Comunidad</h3>
-                        <p class="card-description">Foros, discusiones y cómo contribuir al proyecto.</p>
-                    </a>
-
-                    <a href="estado/" class="card">
-                        <div class="card-icon">📊</div>
-                        <h3 class="card-title">Estado del Sistema</h3>
-                        <p class="card-description">Monitoreo y estado actual de los servicios.</p>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Últimos Cambios -->
-            <section class="section">
-                <div class="section-header">
-                    <span class="section-tag">Novedades</span>
-                    <h2 class="section-title">Últimos Cambios</h2>
-                    <p class="section-description">
-                        Resumen de las actualizaciones más recientes
-                    </p>
-                </div>
-
-                <div class="changelog" id="recent-changes">
-                    <article class="changelog-entry">
-                        <div class="changelog-date">
-                            1 Feb 2026
-                            <span class="changelog-version">v1.2.0</span>
-                        </div>
-                        <h3 class="changelog-title">Mejoras en notificaciones y sincronización</h3>
-                        <div class="changelog-content">
-                            <ul>
-                                <li><span class="changelog-tag changelog-tag-feature">feature</span> Sistema de notificaciones inteligente - solo notifica cambios reales</li>
-                                <li><span class="changelog-tag changelog-tag-fix">fix</span> Corregido spam de notificaciones "copia interna" cada 5 minutos</li>
-                                <li><span class="changelog-tag changelog-tag-feature">feature</span> Nuevo sitio web modular con tema oscuro/claro</li>
-                            </ul>
-                        </div>
-                    </article>
-
-                    <article class="changelog-entry">
-                        <div class="changelog-date">
-                            31 Ene 2026
-                            <span class="changelog-version">v1.1.0</span>
-                        </div>
-                        <h3 class="changelog-title">Integración con Notion y mejoras de scripts</h3>
-                        <div class="changelog-content">
-                            <ul>
-                                <li><span class="changelog-tag changelog-tag-feature">feature</span> Skill de Notion mejorado para guardar links en Backlog</li>
-                                <li><span class="changelog-tag changelog-tag-fix">fix</span> Scripts de sync cargan notify.env automáticamente</li>
-                                <li><span class="changelog-tag changelog-tag-feature">feature</span> Documentación de arquitectura KVM8 actualizada</li>
-                            </ul>
-                        </div>
-                    </article>
-                </div>
-
-                <div class="text-center mt-xl">
-                    <a href="cambios/" class="btn btn-secondary">Ver changelog completo</a>
-                </div>
-            </section>
+    <!-- Stats -->
+    <div class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">15+</div>
+                <div class="stat-label">Skills Personalizados</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">2</div>
+                <div class="stat-label">Changelogs Paralelos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Sincronización</div>
+            </div>
         </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Sección Changelogs -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">📋 Changelogs</span>
+                <h2 class="section-title">Registro de Cambios</h2>
+                <p class="section-description">
+                    Dos changelogs separados: nuestras personalizaciones y las actualizaciones oficiales
+                </p>
+            </div>
+
+            <div class="cards-grid">
+                <a href="changelog-hagoragi/" class="card">
+                    <div class="card-icon">🤖</div>
+                    <h3 class="card-title">HAGORAGI Bot</h3>
+                    <p class="card-description">
+                        Nuestros cambios personalizados: skills, integraciones con Telegram, Notion,
+                        scripts de automatización, y mejoras específicas del workspace.
+                    </p>
+                    <span class="card-link">Ver changelog →</span>
+                </a>
+
+                <a href="changelog-openclaw/" class="card">
+                    <div class="card-icon">🔧</div>
+                    <h3 class="card-title">OpenClaw Official</h3>
+                    <p class="card-description">
+                        Actualizaciones del proyecto OpenClaw original (upstream). Nuevas features
+                        del core, mejoras de rendimiento y correcciones oficiales.
+                    </p>
+                    <span class="card-link">Ver changelog →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección Documentación -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">📚 Documentación</span>
+                <h2 class="section-title">Aprende y Desarrolla</h2>
+            </div>
+
+            <div class="cards-grid">
+                <a href="documentacion/" class="card">
+                    <div class="card-icon">📖</div>
+                    <h3 class="card-title">Documentación General</h3>
+                    <p class="card-description">Guías completas sobre arquitectura, configuración y uso del sistema.</p>
+                </a>
+
+                <a href="api/" class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3 class="card-title">API Reference</h3>
+                    <p class="card-description">Endpoints, métodos y ejemplos de integración.</p>
+                </a>
+
+                <a href="tutoriales/" class="card">
+                    <div class="card-icon">🎓</div>
+                    <h3 class="card-title">Tutoriales</h3>
+                    <p class="card-description">Paso a paso para configurar y extender el sistema.</p>
+                </a>
+
+                <a href="faq/" class="card">
+                    <div class="card-icon">❓</div>
+                    <h3 class="card-title">FAQ</h3>
+                    <p class="card-description">Preguntas frecuentes y soluciones a problemas comunes.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección Proyecto -->
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">🛠️ Proyecto</span>
+                <h2 class="section-title">Desarrollo y Recursos</h2>
+            </div>
+
+            <div class="cards-grid">
+                <a href="skills/" class="card">
+                    <div class="card-icon">🧩</div>
+                    <h3 class="card-title">Skills</h3>
+                    <p class="card-description">Módulos que extienden las capacidades: Notion, Telegram, Web Deploy, Slack.</p>
+                </a>
+
+                <a href="desarrollo/" class="card">
+                    <div class="card-icon">💻</div>
+                    <h3 class="card-title">Desarrollo</h3>
+                    <p class="card-description">Scripts, configuración Docker y herramientas de automatización.</p>
+                </a>
+
+                <a href="proyectos/" class="card">
+                    <div class="card-icon">📊</div>
+                    <h3 class="card-title">Proyectos</h3>
+                    <p class="card-description">Subproyectos y experimentos en desarrollo.</p>
+                </a>
+
+                <a href="estado/" class="card">
+                    <div class="card-icon">📈</div>
+                    <h3 class="card-title">Estado del Sistema</h3>
+                    <p class="card-description">Monitoreo y estado actual de los servicios.</p>
+                </a>
+
+                <a href="seguridad/" class="card">
+                    <div class="card-icon">🔒</div>
+                    <h3 class="card-title">Seguridad</h3>
+                    <p class="card-description">Políticas, protocolos y mejores prácticas.</p>
+                </a>
+
+                <a href="acerca/" class="card">
+                    <div class="card-icon">ℹ️</div>
+                    <h3 class="card-title">Acerca de</h3>
+                    <p class="card-description">Información sobre el proyecto y arquitectura.</p>
+                </a>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-brand-name">
-                        <span class="navbar-brand-icon">◈</span>
-                        AGI Deployments
-                    </div>
+                    <div class="footer-brand-title">🤖 HAGORAGI</div>
                     <p class="footer-brand-description">
-                        Portal central para el proyecto OpenClaw. Documentación, recursos y herramientas
-                        para el desarrollo de IA responsable.
+                        Asistente IA personalizado basado en OpenClaw. Conectando inteligencia artificial con productividad.
                     </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Changelogs</h4>
+                    <ul class="footer-links">
+                        <li><a href="changelog-hagoragi/">HAGORAGI Bot</a></li>
+                        <li><a href="changelog-openclaw/">OpenClaw Official</a></li>
+                    </ul>
                 </div>
 
                 <div class="footer-column">
@@ -249,34 +204,23 @@
                 <div class="footer-column">
                     <h4>Proyecto</h4>
                     <ul class="footer-links">
-                        <li><a href="cambios/">Changelog</a></li>
-                        <li><a href="proyectos/">Proyectos</a></li>
-                        <li><a href="estado/">Estado</a></li>
-                        <li><a href="seguridad/">Seguridad</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-column">
-                    <h4>Comunidad</h4>
-                    <ul class="footer-links">
-                        <li><a href="comunidad/">Foros</a></li>
-                        <li><a href="blog/">Blog</a></li>
-                        <li><a href="contacto/">Contacto</a></li>
-                        <li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank">GitHub</a></li>
+                        <li><a href="skills/">Skills</a></li>
+                        <li><a href="desarrollo/">Desarrollo</a></li>
+                        <li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank">GitHub ↗</a></li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 AGI Deployments. Proyecto OpenClaw.</p>
+                <p>© 2026 HAGORAGI. Basado en <a href="https://github.com/openclaw/openclaw" target="_blank">OpenClaw</a>.</p>
                 <p>
                     <a href="acerca/">Acerca de</a> ·
-                    <a href="https://github.com/maestroagi/openclaw-workspace">Código fuente</a>
+                    <a href="seguridad/">Seguridad</a>
                 </p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
