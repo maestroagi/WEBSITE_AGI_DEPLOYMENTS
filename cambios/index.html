@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Cambios - OpenClaw | Proyecto AGI</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav">
+            <ul>
+                <li><a href="../">Inicio</a></li>
+                <li><a href="../investigacion/">Investigación</a></li>
+                <li><a href="../desarrollo/">Desarrollo</a></li>
+                <li><a href="../documentacion/">Documentación</a></li>
+                <li><a href="../comunidad/">Comunidad</a></li>
+                <li><a href="../proyectos/">Proyectos</a></li>
+                <li><a href="../cambios/">Cambios</a></li>
+            </ul>
+        </nav>
+        <div class="breadcrumb">
+            <a href="../">Inicio</a> <span>›</span> <a href="../cambios/">Registro de Cambios</a>
+        </div>
+        <header>
+            <h1>📋 Registro de Cambios - OpenClaw</h1>
+            <p class="subtitle">Historial completo de actualizaciones y mejoras del sistema</p>
+        </header>
+
+        <main>
+            <section class="content-section">
+                <article class="change-log">
+                    <h2>Últimas Actualizaciones del Proyecto OpenClaw</h2>
+
+                    <div class="version-card" id="v2026-1-31">
+                        <h3 class="version-title">Versión 2026.1.31</h3>
+                        <ul class="change-list">
+                            <li><strong>Telegram</strong>: uso compartido de almacenamiento de emparejamiento</li>
+                            <li><strong>Arreglos</strong>: Autoreply evita referencias a archivos de workspace, proceso resuelve fallos de spawn en Windows</li>
+                            <li><strong>Correcciones</strong>: OAuth para MiniMax, mejoras en Discord y Telegram</li>
+                            <li><strong>Nuevas integraciones</strong>: Kimi K2.5 y actualizaciones en pi SDK</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card" id="v2026-1-30">
+                        <h3 class="version-title">Versión 2026.1.30</h3>
+                        <ul class="change-list">
+                            <li><strong>CLI</strong>: nuevo comando <code class="code-inline">completion</code> y mejoras en <code class="code-inline">models status</code></li>
+                            <li><strong>Agentes</strong>: integración con Kimi K2.5 y actualizaciones en pi SDK</li>
+                            <li><strong>Autenticación</strong>: integración OAuth con MiniMax</li>
+                            <li><strong>Seguridad</strong>: restricciones adicionales para prevenir Local File Inclusion</li>
+                            <li><strong>Numerosas correcciones</strong> en Telegram, BlueBubbles, Discord, LINE, OAuth, y más</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card" id="v2026-1-29">
+                        <h3 class="version-title">Versión 2026.1.29 - Rebranding Importante</h3>
+                        <ul class="change-list">
+                            <li><strong>Rebrand</strong>: paquete npm renombrado a <code class="code-inline">openclaw</code></li>
+                            <li><strong>Cambios de seguridad</strong>: autenticación obligatoria (modo "none" eliminado)</li>
+                            <li><strong>Amplias mejoras</strong> en Telegram, Discord, Slack, BlueBubbles, y otras plataformas</li>
+                            <li><strong>Nuevas características</strong>: LINE plugin, TTS con Edge fallback, ejecución de aprobaciones con <code class="code-inline">/approve</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.24</h3>
+                        <ul class="change-list">
+                            <li><strong>Proveedores</strong>: Descubrimiento de Ollama + documentación</li>
+                            <li><strong>Canales</strong>: Plugin LINE con respuestas ricas y respuestas rápidas</li>
+                            <li><strong>TTS</strong>: Proveedor Edge fallback y modos automáticos</li>
+                            <li><strong>Telegram</strong>: Temas DM como sesiones separadas</li>
+                            <li><strong>Web search</strong>: Parámetro de filtro de frescura de Brave</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.23</h3>
+                        <ul class="change-list">
+                            <li><strong>TTS</strong>: Movido a núcleo + etiquetas TTS dirigidas por modelo</li>
+                            <li><strong>Gateway</strong>: Endpoint HTTP <code class="code-inline">/tools/invoke</code> para llamadas directas a herramientas</li>
+                            <li><strong>Heartbeat</strong>: Controles de visibilidad por canal</li>
+                            <li><strong>Deploy</strong>: Soporte y guía para Fly.io</li>
+                            <li><strong>Canales</strong>: Plugin Tlon/Urbit</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.22</h3>
+                        <ul class="change-list">
+                            <li><strong>Compaction safeguard</strong>: Usa fragmentación adaptable y recuperación progresiva</li>
+                            <li><strong>Mejoras en BlueBubbles</strong>: Soporte para <code class="code-inline">asVoice</code> para memorias de voz</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.21</h3>
+                        <ul class="change-list">
+                            <li><strong>Lobster</strong>: Plugin opcional para flujos de trabajo tipados</li>
+                            <li><strong>CLI</strong>: <code class="code-inline">openclaw update wizard</code> para selección interactiva de canales</li>
+                            <li><strong>Signal</strong>: Indicadores de escritura y confirmaciones de lectura DM</li>
+                            <li><strong>Control UI</strong>: Ahora rechaza HTTP inseguro sin identidad de dispositivo por defecto</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.20</h3>
+                        <ul class="change-list">
+                            <li><strong>Control UI</strong>: Eliminada vista de lista heredada, nuevas características</li>
+                            <li><strong>TUI</strong>: Resaltado de sintaxis y mejoras en selección de modelo</li>
+                            <li><strong>ACP</strong>: Nuevo <code class="code-inline">openclaw acp</code> para integraciones IDE</li>
+                            <li><strong>Memoria</strong>: Búsqueda híbrida BM25 + vector (FTS5), caché de embeddings SQLite</li>
+                            <li><strong>Nuevos plugins</strong>: Nostr, Matrix con soporte E2EE, Slack con modo webhook HTTP</li>
+                            <li><strong>Sistema de plugins</strong>: SDK unificado y migración de extensiones</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.16</h3>
+                        <ul class="change-list">
+                            <li><strong>Hooks</strong>: Nuevo sistema de hooks con herramientas CLI y documentación</li>
+                            <li><strong>Media</strong>: Entendimiento de medios entrantes (imagen/audio/video)</li>
+                            <li><strong>Plugins</strong>: Plugin Zalo Personal y directorio unificado</li>
+                            <li><strong>Web search</strong>: Parámetros <code class="code-inline">country</code>/<code class="code-inline">language</code> (schema + API Brave)</li>
+                            <li><strong>Cambios importantes</strong>: <code class="code-inline">openclaw message</code> ahora requiere <code class="code-inline">target</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.15</h3>
+                        <ul class="change-list">
+                            <li><strong>Plugins</strong>: Registro de autenticación de proveedores y <code class="code-inline">openclaw models auth login</code></li>
+                            <li><strong>Browser</strong>: Mejora del soporte CDP/Browserless remoto</li>
+                            <li><strong>Heartbeat</strong>: Configuración por agente + supresión de duplicados 24h</li>
+                            <li><strong>Seguridad</strong>: Auditoría advierte sobre niveles débiles de modelo</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.14</h3>
+                        <ul class="change-list">
+                            <li><strong>Web tools</strong>: <code class="code-inline">web_search</code>/<code class="code-inline">web_fetch</code> integrados (API Brave)</li>
+                            <li><strong>Browser control</strong>: Modo de toma de control de extensión Chrome</li>
+                            <li><strong>Plugins</strong>: Canales como plugins + plugin Zalo + flujo de instalación</li>
+                            <li><strong>Seguridad</strong>: Expansión de <code class="code-inline">openclaw security audit</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.12</h3>
+                        <ul class="change-list">
+                            <li><strong>BREAKING</strong>: Renombrado de "proveedores" a "canales" en CLI/RPC/config</li>
+                            <li><strong>Memory</strong>: Búsqueda vectorial para memorias de agente con SQLite index</li>
+                            <li><strong>Plugins</strong>: Restauración de paridad completa de voice-call</li>
+                            <li><strong>Cron</strong>: Soporte para horarios únicos con marcas de tiempo ISO</li>
+                            <li><strong>Agents</strong>: Configuración de modo de compaction con salvaguarda</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.11</h3>
+                        <ul class="change-list">
+                            <li><strong>Plugins</strong>: Carga y gestión como primera clase</li>
+                            <li><strong>Config</strong>: Soporte para <code class="code-inline">$include</code> para archivos de configuración modulares</li>
+                            <li><strong>Agentes</strong>: Reserva de espacio de compaction y limpieza automática de memoria</li>
+                            <li><strong>Aplicación de parches</strong>: Nuevo aplicador de parches JS integrado</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.10</h3>
+                        <ul class="change-list">
+                            <li><strong>CLI</strong>: <code class="code-inline">openclaw status</code> ahora basado en tablas</li>
+                            <li><strong>CLI</strong>: <code class="code-inline">openclaw update</code> para actualizaciones seguras</li>
+                            <li><strong>Gateway</strong>: Endpoint HTTP <code class="code-inline">/v1/chat/completions</code> compatible con OpenAI</li>
+                            <li><strong>Z.AI</strong>: Soporte de autenticación para GLM</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.9</h3>
+                        <ul class="change-list">
+                            <li><strong>Microsoft Teams</strong>: Nuevo proveedor con polling y adjuntos</li>
+                            <li><strong>Autenticación</strong>: Expansión con OpenCode Zen + MiniMax API</li>
+                            <li><strong>CLI</strong>: Subcomandos de mensaje y mejoras en gateway status</li>
+                            <li><strong>Auto-reply</strong>: Controles de streaming de bloque mejorados</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.8 - Cambios de Seguridad Importantes</h3>
+                        <ul class="change-list">
+                            <li><strong>SEGURIDAD</strong>: DMs bloqueados por defecto en todos los proveedores</li>
+                            <li><strong>Sandbox</strong>: Ámbito por defecto por agente</li>
+                            <li><strong>Sistema endurecido</strong>: Compaction, streaming y manejo de errores</li>
+                            <li><strong>Control UI</strong>: Nueva pestaña de logs y mejoras de estabilidad</li>
+                        </ul>
+                    </div>
+
+                    <div class="version-card">
+                        <h3 class="version-title">Versión 2026.1.5</h3>
+                        <ul class="change-list">
+                            <li><strong>Modelos</strong>: Configuración específica para imágenes (<code class="code-inline">agent.imageModel</code>)</li>
+                            <li><strong>Herramientas</strong>: Nueva herramienta <code class="code-inline">image</code> dirigida al modelo de imagen</li>
+                            <li><strong>Config</strong>: Atajos de modelos por defecto (<code class="code-inline">opus</code>, <code class="code-inline">sonnet</code>, <code class="code-inline">gpt</code>, etc.)</li>
+                        </ul>
+                    </div>
+
+                    <h2>Mejoras Personalizadas y Específicas</h2>
+
+                    <div class="category-card">
+                        <h3>Integración con Google Workspace</h3>
+                        <ul class="change-list">
+                            <li><strong>Gmail, Calendar, Drive, Docs, Sheets</strong>: Implementación completa usando mcporter</li>
+                            <li><strong>Autenticación OAuth</strong>: Configuración automatizada para múltiples cuentas</li>
+                            <li><strong>API robusta</strong>: Acceso programático a todos los servicios de Google Workspace</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <h3>Sistema de Skills Avanzado</h3>
+                        <ul class="change-list">
+                            <li><strong>Más de 60 skills disponibles</strong>: Cada una especializada en diferentes dominios</li>
+                            <li><strong>Notion Integration</strong>: Scripts avanzados para manejo de bases de datos</li>
+                            <li><strong>Web Deployment</strong>: Automatización completa de despliegues a GitHub Pages</li>
+                            <li><strong>Agent Browser</strong>: Automatización web headless con soporte completo</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <h3>Desarrollo de Código Profesional</h3>
+                        <ul class="change-list">
+                            <li><strong>Coding Agent</strong>: Integración con múltiples proveedores de IA para desarrollo</li>
+                            <li><strong>Flujos de trabajo ágiles</strong>: Implementación de prácticas de desarrollo profesional</li>
+                            <li><strong>CI/CD automatizado</strong>: Pipelines completos de integración y entrega continua</li>
+                            <li><strong>Pruebas automatizadas</strong>: Frameworks completos de testing integrados</li>
+                        </ul>
+                    </div>
+
+                    <div class="category-card">
+                        <h3>Gestión de Memoria y Aprendizaje</h3>
+                        <ul class="change-list">
+                            <li><strong>Self-Improving Agent</strong>: Sistema de auto-mejora continua</li>
+                            <li><strong>Memoria vectorial</strong>: Búsqueda semántica avanzada en conocimientos previos</li>
+                            <li><strong>Registro de aprendizajes</strong>: Documentación automática de lecciones aprendidas</li>
+                            <li><strong>Promoción de conocimientos</strong>: Elevación automática de información valiosa</li>
+                        </ul>
+                    </div>
+
+                    <div class="impact-section">
+                        <h2>Impacto en la Plataforma</h2>
+                        <p>Estas mejoras representan una evolución significativa hacia una plataforma más robusta, segura y funcional. La combinación de las actualizaciones oficiales de OpenClaw con las personalizaciones específicas crea un entorno de desarrollo y operación extremadamente poderoso, capaz de soportar equipos de desarrollo profesionales trabajando en proyectos complejos con los más altos estándares de la industria.</p>
+                        
+                        <p>La integración continua de nuevas funcionalidades, junto con el sistema de auto-mejora, asegura que la plataforma evolucione constantemente para satisfacer las necesidades cambiantes de sus usuarios y mantenerse a la vanguardia de la tecnología de asistentes de IA.</p>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a href="../">Inicio</a>
+                <a href="../desarrollo/">Desarrollo</a>
+                <a href="../documentacion/">Documentación</a>
+            </div>
+            <p class="copyright">© 2026 OpenClaw - Registro de Cambios</p>
+        </footer>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>
