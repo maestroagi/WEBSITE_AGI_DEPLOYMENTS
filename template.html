@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} - Proyecto AGI</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #1a2a6c 0%, #b21f1f 50%, #1a2a6c 100%);
+            --primary-dark: #1a2a6c;
+            --secondary-dark: #b21f1f;
+            --accent: #667eea;
+            --light-bg: rgba(255, 255, 255, 0.97);
+            --text-primary: #333;
+            --text-secondary: #666;
+            --border-radius: 20px;
+            --shadow: 0 15px 35px rgba(0,0,0,0.2);
+            --transition: all 0.4s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            padding-bottom: 40px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Navegación superior */
+        .top-nav {
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 15px 0;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .top-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .top-nav li {
+            margin: 0 15px;
+        }
+        
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: var(--transition);
+        }
+        
+        .top-nav a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .breadcrumb {
+            background: var(--light-bg);
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .breadcrumb span {
+            margin: 0 10px;
+            color: var(--text-secondary);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .content {
+            background: var(--light-bg);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: var(--primary-dark);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+        
+        .section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .link-item {
+            background: linear-gradient(45deg, var(--accent), #764ba2);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            display: block;
+        }
+        
+        .link-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #764ba2, var(--accent));
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: white;
+            opacity: 0.9;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+        }
+        
+        .footer-links {
+            margin: 20px 0;
+        }
+        
+        .footer-links a {
+            color: #ff8a00;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: #da1b60;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .top-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .top-nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navegación superior -->
+        <nav class="top-nav">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/investigacion/">Investigación</a></li>
+                <li><a href="/desarrollo/">Desarrollo</a></li>
+                <li><a href="/documentacion/">Documentación</a></li>
+                <li><a href="/comunidad/">Comunidad</a></li>
+                <li><a href="/proyectos/">Proyectos</a></li>
+            </ul>
+        </nav>
+        
+        <div class="breadcrumb">
+            <a href="/">Inicio</a> <span>></span> <a href="{{BREADCRUMB_PATH}}">{{CATEGORY}}</a> <span>></span> {{TITLE}}
+        </div>
+        
+        <header>
+            <h1>{{ICON}} {{TITLE}}</h1>
+            <p class="subtitle">{{SUBTITLE}}</p>
+        </header>
+        
+        <div class="content">
+            <div class="section">
+                <h2>Acerca de {{TITLE}}</h2>
+                <p>{{DESCRIPTION}}</p>
+                
+                <h3>Recursos disponibles:</h3>
+                <div class="links-grid">
+                    <a href="#" class="link-item">Documentación</a>
+                    <a href="#" class="link-item">Tutoriales</a>
+                    <a href="#" class="link-item">Ejemplos</a>
+                    <a href="#" class="link-item">API</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>{{TITLE}} - Proyecto AGI © 2026</p>
+            <p>{{FOOTER_TEXT}}</p>
+            <div class="footer-links">
+                <a href="/">Inicio</a>
+                <a href="/acerca/">Acerca de</a>
+                <a href="/contacto/">Contacto</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

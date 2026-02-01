@@ -1,14 +1,9 @@
-# WEBSITE_AGI_DEPLOYMENTS
+# ⛔ NO USAR ESTA CARPETA PARA CREAR PÁGINAS
 
-Sitio principal con subpáginas en GitHub Pages.
+**Esta carpeta no es el sitio que se despliega.**
 
-- **Raíz:** `index.html` = índice con enlaces a todas las subpáginas.
-- **Subpáginas:** cada carpeta `<slug>/` tiene su `index.html` (ej. `mi-pagina/index.html`).
+- **Único lugar válido para crear o editar páginas del sitio público:** `sites/WEBSITE_AGI_DEPLOYMENTS/`
+- El bot debe usar el script `create_page.sh` y trabajar **solo** en `sites/WEBSITE_AGI_DEPLOYMENTS/`.
+- Sitio en vivo: https://maestroagi.github.io/WEBSITE_AGI_DEPLOYMENTS/
 
-Añadir una subpágina (desde la raíz del repo):
-
-```bash
-bash scripts/add_subpage.sh <slug> "<Título para el enlace>"
-```
-
-Luego crear/editar `<slug>/index.html` con el contenido. El enlace aparece automáticamente en la página principal.
+Ver: `skills/web-deploy-github/BOT-INSTRUCTIONS.md` y `TOOLS.md` (sección Web).
