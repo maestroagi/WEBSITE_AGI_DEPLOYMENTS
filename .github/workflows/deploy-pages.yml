@@ -17,6 +17,11 @@ permissions:
   pages: write
   id-token: write
 
+# Evitar despliegues paralelos que puedan causar conflictos
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
