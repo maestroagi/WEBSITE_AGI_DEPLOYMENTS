@@ -3,64 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Investigación - Proyectos de investigación en IA">
-    <title>Investigación - AGI Deployments</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <meta name="description" content="Investigacion - Proyectos de investigacion en IA">
+    <title>Investigacion - AGI Deployments</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <nav class="navbar"><div class="navbar-container"><a href="../" class="navbar-brand"><span class="navbar-brand-icon">◈</span><span>AGI<span style="color: var(--color-accent);">Deploy</span></span></a><button class="navbar-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button><ul class="navbar-menu"><li><a href="../" class="navbar-link">Inicio</a></li><li class="navbar-dropdown"><a href="#" class="navbar-link">Documentación ▾</a><div class="navbar-dropdown-menu"><a href="../documentacion/" class="navbar-dropdown-item">General</a><a href="../api/" class="navbar-dropdown-item">API</a><a href="../tutoriales/" class="navbar-dropdown-item">Tutoriales</a><a href="../faq/" class="navbar-dropdown-item">FAQ</a></div></li><li class="navbar-dropdown"><a href="#" class="navbar-link active">Proyectos ▾</a><div class="navbar-dropdown-menu"><a href="../proyectos/" class="navbar-dropdown-item">Todos</a><a href="./" class="navbar-dropdown-item">Investigación</a><a href="../desarrollo/" class="navbar-dropdown-item">Desarrollo</a></div></li><li><a href="../comunidad/" class="navbar-link">Comunidad</a></li><li><a href="../cambios/" class="navbar-link">Changelog</a></li><li><a href="https://github.com/maestroagi/openclaw-workspace" target="_blank" class="navbar-link">GitHub</a></li><li><button class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/></svg><svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button></li></ul></div></nav>
+    <div id="site-nav"></div>
 
-    <main class="main-content">
-        <div class="container">
-            <nav class="breadcrumb"><a href="../">Inicio</a><span class="breadcrumb-separator">›</span><a href="../proyectos/">Proyectos</a><span class="breadcrumb-separator">›</span><span>Investigación</span></nav>
+    <div class="container">
+        <nav class="breadcrumb">
+            <a href="../">Inicio</a>
+            <span class="breadcrumb-separator">›</span>
+            <a href="../proyectos/">Proyectos</a>
+            <span class="breadcrumb-separator">›</span>
+            <span>Investigacion</span>
+        </nav>
 
-            <div class="page-header">
-                <h1 class="page-title">Investigación</h1>
-                <p class="page-description">Proyectos de investigación en inteligencia artificial, alineación y seguridad.</p>
+        <header class="page-header">
+            <div class="page-icon">🔬</div>
+            <h1 class="page-title">Investigacion</h1>
+            <p class="page-description">
+                Proyectos de investigacion en inteligencia artificial, alineacion y seguridad.
+            </p>
+        </header>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">🧠</div>
+                <h3 class="card-title">Alineacion de IA</h3>
+                <p class="card-description">Investigacion sobre como asegurar que los sistemas de IA actuen de acuerdo con los valores humanos.</p>
             </div>
 
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-icon">🧠</div>
-                    <h3 class="card-title">Alineación de IA</h3>
-                    <p class="card-description">Investigación sobre cómo asegurar que los sistemas de IA actúen de acuerdo con los valores humanos.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🔒</div>
-                    <h3 class="card-title">Seguridad de Sistemas</h3>
-                    <p class="card-description">Estudio de vulnerabilidades y mecanismos de protección para asistentes de IA.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">📊</div>
-                    <h3 class="card-title">Evaluación de Modelos</h3>
-                    <p class="card-description">Benchmarks y métricas para evaluar el rendimiento y capacidades de LLMs.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🤝</div>
-                    <h3 class="card-title">Interacción Humano-IA</h3>
-                    <p class="card-description">Investigación sobre interfaces y patrones de comunicación efectivos.</p>
-                </div>
+            <div class="card">
+                <div class="card-icon">🔒</div>
+                <h3 class="card-title">Seguridad de Sistemas</h3>
+                <p class="card-description">Estudio de vulnerabilidades y mecanismos de proteccion para asistentes de IA.</p>
             </div>
 
-            <section class="section">
-                <h2>Recursos</h2>
-                <div class="card">
-                    <p class="card-description">La investigación en IA segura y alineada es fundamental para el desarrollo responsable de sistemas inteligentes. Exploramos temas como interpretabilidad, robustez y comportamiento emergente.</p>
-                    <div class="mt-lg">
-                        <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/docs" target="_blank" class="btn btn-primary">Ver documentación de investigación</a>
-                    </div>
-                </div>
-            </section>
+            <div class="card">
+                <div class="card-icon">📊</div>
+                <h3 class="card-title">Evaluacion de Modelos</h3>
+                <p class="card-description">Benchmarks y metricas para evaluar el rendimiento y capacidades de LLMs.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h3 class="card-title">Interaccion Humano-IA</h3>
+                <p class="card-description">Investigacion sobre interfaces y patrones de comunicacion efectivos.</p>
+            </div>
         </div>
-    </main>
 
-    <footer class="footer"><div class="container"><div class="footer-bottom"><p>&copy; 2026 AGI Deployments.</p><p><a href="../">Volver al inicio</a></p></div></div></footer>
-    <script src="../assets/js/main.js"></script>
+        <section class="section">
+            <div class="section-header">
+                <span class="section-tag">📚 Recursos</span>
+                <h2 class="section-title">Documentacion de Investigacion</h2>
+            </div>
+            <div class="card">
+                <p class="card-description">La investigacion en IA segura y alineada es fundamental para el desarrollo responsable de sistemas inteligentes. Exploramos temas como interpretabilidad, robustez y comportamiento emergente.</p>
+                <div class="mt-lg">
+                    <a href="https://github.com/maestroagi/openclaw-workspace/tree/main/docs" target="_blank" class="btn btn-primary">Ver documentacion en GitHub</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 HAGORAGI.</p>
+                <p><a href="../">← Volver al inicio</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
