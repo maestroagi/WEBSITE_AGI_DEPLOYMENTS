@@ -38,27 +38,17 @@ jobs:
           TS_FMT=$(echo "$COMMIT_TIMESTAMP" | sed 's/T/ /; s/\.[0-9]*Z/ UTC/')
           FILES=$(git show --name-only --format="" "$SHA" 2>/dev/null | head -15)
           STAT=$(git show --shortstat --format="" "$SHA" 2>/dev/null || echo "")
-          FILES_BULLET=$(echo "$FILES" | sed 's/^/  • /' | head -15)
-          BODY="🌐 SITIO ACTUALIZADO — WEBSITE_AGI_DEPLOYMENTS
-          ━━━━━━━━━━━━━          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-          Repo:    ${REPO}
-          Autor:   ${COMMIT_AUTHOR}
-          Fecha:   ${TS_FMT}
-
-          Commit:  ${SHORT_SHA}
-          Mensaje: ${COMMIT_MSG_ONE}"
+          FILES_COMPACT=$(echo "$FILES" | head -8 | tr '\n' ', ' | sed 's/, $//')
+          BODY="🌐 Sitio actualizado — ${COMMIT_AUTHOR}
+${REPO} · ${SHORT_SHA} · ${TS_FMT}
+${COMMIT_MSG_ONE}"
           [ -n "$STAT" ] && BODY="$BODY
-
-          Cambios: ${STAT}"
-          [ -n "$FILES" ] && BODY="$BODY
-
-          Archivos:
-          $FILES_BULLET"
+${STAT}"
+          [ -n "$FILES_COMPACT" ] && BODY="$BODY
+📄 ${FILES_COMPACT}"
           BODY="$BODY
-
-          🔗 Commit: $COMMIT_URL
-          📄 Sitio:  $SITE_URL"
+🔗 $COMMIT_URL
+📄 $SITE_URL"
           TEXT_JSON=$(echo "$BODY" | jq -Rs .)
           curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -H "Content-Type: application/json" \
