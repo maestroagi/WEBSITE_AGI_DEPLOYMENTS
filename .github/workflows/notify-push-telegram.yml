@@ -12,6 +12,11 @@ jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout para obtener archivos del commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Enviar notificación a Telegram
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_NOTIFY_BOT_TOKEN }}
@@ -20,16 +25,40 @@ jobs:
           COMMIT_AUTHOR: ${{ github.event.head_commit.author.name }}
           REPO: ${{ github.repository }}
           SHA: ${{ github.sha }}
+          COMMIT_TIMESTAMP: ${{ github.event.head_commit.timestamp }}
         run: |
           if [ -z "$TELEGRAM_BOT_TOKEN" ] || [ -z "$TELEGRAM_CHAT_ID" ]; then
             echo "Secrets no configurados: añade TELEGRAM_NOTIFY_BOT_TOKEN y TELEGRAM_NOTIFY_CHAT_ID en Settings → Secrets and variables → Actions."
             exit 0
           fi
-          SHORT_SHA="${SHA::7}"
+          SHORT_SHA="${SHA:0:7}"
           COMMIT_MSG_ONE=$(echo "$COMMIT_MSG" | head -1 | sed 's/"/\\"/g; s/\\/\\\\/g')
-          URL="https://github.com/${REPO}/commit/${SHA}"
+          COMMIT_URL="https://github.com/${REPO}/commit/${SHA}"
           SITE_URL="https://maestroagi.github.io/WEBSITE_AGI_DEPLOYMENTS/"
-          BODY=$(printf "🌐 Sitio actualizado (WEBSITE_AGI_DEPLOYMENTS)\nPush a main | %s\nCommit: %s — %s\n🔗 %s\n📄 %s" "$COMMIT_AUTHOR" "$SHORT_SHA" "$COMMIT_MSG_ONE" "$URL" "$SITE_URL")
+          TS_FMT=$(echo "$COMMIT_TIMESTAMP" | sed 's/T/ /; s/\.[0-9]*Z/ UTC/')
+          FILES=$(git show --name-only --format="" "$SHA" 2>/dev/null | head -15)
+          STAT=$(git show --shortstat --format="" "$SHA" 2>/dev/null || echo "")
+          FILES_BULLET=$(echo "$FILES" | sed 's/^/  • /' | head -15)
+          BODY="🌐 SITIO ACTUALIZADO — WEBSITE_AGI_DEPLOYMENTS
+          ━━━━━━━━━━━━━          ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+          Repo:    ${REPO}
+          Autor:   ${COMMIT_AUTHOR}
+          Fecha:   ${TS_FMT}
+
+          Commit:  ${SHORT_SHA}
+          Mensaje: ${COMMIT_MSG_ONE}"
+          [ -n "$STAT" ] && BODY="$BODY
+
+          Cambios: ${STAT}"
+          [ -n "$FILES" ] && BODY="$BODY
+
+          Archivos:
+          $FILES_BULLET"
+          BODY="$BODY
+
+          🔗 Commit: $COMMIT_URL
+          📄 Sitio:  $SITE_URL"
           TEXT_JSON=$(echo "$BODY" | jq -Rs .)
           curl -sS -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
             -H "Content-Type: application/json" \
